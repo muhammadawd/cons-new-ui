@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اختر المدينة | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="h-dvh min-h-screen overflow-hidden bg-[#f7f7f7] text-gray-900 antialiased">
+
+  <main class="h-dvh min-h-screen">
+    <article class="h-full min-h-screen">
+      <div class="flex h-full min-h-screen flex-col lg:flex-row">
+
+        <section class="selection-panel order-1 flex min-h-0 flex-1 flex-col overflow-y-auto bg-[#f7f7f7] px-5 py-8 sm:px-8 sm:py-10 lg:order-2 lg:px-12 lg:py-12 xl:px-16" aria-labelledby="city-heading">
+
+          <nav class="breadcrumb-nav" aria-label="التنقل">
+            <a href="select-country.html" class="breadcrumb-back">
+              <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm" aria-hidden="true"></iconify-icon>
+              العودة
+            </a>
+            <span class="breadcrumb-tag">
+              <span class="breadcrumb-tag__dot" aria-hidden="true"></span>
+              المملكة العربية السعودية
+            </span>
+          </nav>
+
+          <h2 id="city-heading" class="page-heading">
+            اختر المدينة التي تقيم بها:
+          </h2>
+
+          <div class="search-box" dir="rtl">
+            <label for="city-search" class="sr-only">ابحث</label>
+            <input
+              id="city-search"
+              type="search"
+              data-search
+              placeholder="ابحث"
+              class="search-field"
+            />
+            <span class="search-box__label" aria-hidden="true">
+              <iconify-icon icon="iconamoon:search-light" class="icon"></iconify-icon>
+              <span>ابحث</span>
+            </span>
+          </div>
+
+          <div class="options-grid">
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">الرياض</span>
+            </a>
+            <a href="home.html" data-option class="option-link" aria-current="page">
+              <span class="option-radio" aria-hidden="true">
+                <iconify-icon icon="mdi:check" class="icon icon--sm"></iconify-icon>
+              </span>
+              <span class="option-link__label">جدة</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">الدمام</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">مكة المكرمة</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">المدينة المنورة</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">الطائف</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">الخبر</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">أبها</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">تبوك</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">بريدة</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">حائل</span>
+            </a>
+            <a href="home.html" data-option class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">نجران</span>
+            </a>
+          </div>
+
+        </section>
+
+        <aside class="branding-panel order-2 lg:order-1" aria-label="مصري بالخارج">
+          <div class="branding-panel__circle branding-panel__circle--start" aria-hidden="true"></div>
+          <div class="branding-panel__circle branding-panel__circle--end" aria-hidden="true"></div>
+
+          <div class="branding-panel__content">
+            <p class="branding-panel__welcome">أهلاً بك في</p>
+
+            <div class="branding-panel__brand-row">
+              <img src="assets/images/logo.png" alt="" class="branding-panel__logo" width="55" height="55" />
+              <p class="branding-panel__title">مصري بالخارج</p>
+            </div>
+          </div>
+
+          <p class="branding-panel__tagline">
+            نسعد بخدمتك في أي مكان حول العالم
+          </p>
+        </aside>
+
+      </div>
+    </article>
+  </main>
+
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>

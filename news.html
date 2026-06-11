@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أحدث الأخبار | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/faq.css" />
+  <link rel="stylesheet" href="assets/css/news.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="news-page antialiased">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="home.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="" class="site-logo__img" width="40" height="40" />
+        <span class="site-logo__text">مصري بالخارج</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <div class="site-nav__drawer-head">
+          <span class="site-nav__drawer-title">القائمة</span>
+          <button type="button" class="site-nav__close" data-sidebar-close aria-label="إغلاق القائمة">
+            <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+          </button>
+        </div>
+        <a href="home.html" class="site-nav__link">الرئيسية</a>
+        <a href="news.html" class="site-nav__link site-nav__link--active">الأخبار</a>
+        <a href="request-tracking.html" class="site-nav__link">تتبع الطلب</a>
+        <a href="#" class="site-nav__link">إدارة أفراد الأسرة</a>
+
+        <div class="header-dropdown nav-dropdown">
+          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+            معلومات القنصلية
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel" hidden>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link">الخدمات الإلكترونية</a>
+              <a href="#" class="header-dropdown__link">الوثائق المطلوبة</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-dropdown nav-dropdown">
+          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+            تواصل معنا
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel" hidden>
+            <div class="header-dropdown__body">
+              <a href="faq.html" class="header-dropdown__link">الأسئلة الشائعة</a>
+              <a href="complaints.html" class="header-dropdown__link">الشكاوى والمقترحات</a>
+              <a href="home.html#location-title" class="header-dropdown__link">موقع القنصلية</a>
+            </div>
+          </div>
+        </div>
+        <div class="site-nav__drawer-footer">
+          <a href="#" class="btn-outline site-nav__login auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="notifications.html" class="icon-btn text-[#111111] w-[24px] h-[24px]" aria-label="الإشعارات">
+          <iconify-icon icon="mdi:bell-notification-outline" class="icon text-[20px]"></iconify-icon>
+        </a>
+
+        <div class="header-dropdown lang-dropdown w-[24px] h-[24px] text-[#111111] flex items-center justify-center">
+          <button type="button" class="lang-dropdown__toggle" id="lang-toggle" aria-label="اللغة" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+            <iconify-icon icon="iconoir:language" class="icon text-[20px] text-[#111111]"></iconify-icon>
+            <iconify-icon icon="mdi:chevron-down" class="lang-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel lang-dropdown__panel" id="lang-menu" role="listbox" aria-labelledby="lang-toggle" hidden>
+            <div class="header-dropdown__body">
+              <button type="button" class="header-dropdown__link-btn" data-lang="ar" role="option" aria-selected="false">العربية</button>
+              <button type="button" class="header-dropdown__link-btn" data-lang="en" role="option" aria-selected="false">English</button>
+            </div>
+          </div>
+        </div>
+
+        <span class="site-header__divider" aria-hidden="true"></span>
+
+        <a href="#" class="btn-outline auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+
+        <div class="header-dropdown user-dropdown auth-user" hidden>
+          <button type="button" class="user-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-label="حسابي">
+            <span class="user-dropdown__avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <iconify-icon icon="mdi:chevron-down" class="user-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel user-dropdown__panel" hidden>
+            <div class="user-dropdown__info">
+              <strong class="user-dropdown__name">محمد عوض    </strong>
+              <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
+            </div>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link header-dropdown__link--icon">
+                <iconify-icon icon="mdi:account-switch-outline" class="icon"></iconify-icon>
+                تبديل الحساب
+              </a>
+              <button type="button" class="header-dropdown__link header-dropdown__link--danger header-dropdown__link--icon" data-auth-toggle="logout">
+                <iconify-icon icon="mdi:logout" class="icon"></iconify-icon>
+                تسجيل الخروج
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="site-header__menu-toggle" data-sidebar-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <iconify-icon icon="mdi:menu" class="icon"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <button type="button" class="site-sidebar-overlay" data-sidebar-overlay hidden aria-label="إغلاق القائمة"></button>
+
+  <section class="faq-hero">
+    <div class="faq-hero__inner">
+      <h1 class="faq-hero__title">أحدث الأخبار</h1>
+      <nav class="faq-breadcrumb" aria-label="مسار التنقل">
+        <a href="home.html">الرئيسية</a>
+        <span class="faq-breadcrumb__sep" aria-hidden="true">
+          <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
+        </span>
+        <span class="faq-breadcrumb__current" aria-current="page">الأخبار</span>
+      </nav>
+    </div>
+  </section>
+
+  <main class="news-main">
+    <div class="news-main__inner">
+      <div class="news-filters" role="tablist" aria-label="تصفية الأخبار">
+        <button type="button" class="news-filter news-filter--active" data-news-filter="all" role="tab" aria-selected="true">الكل</button>
+        <button type="button" class="news-filter" data-news-filter="consulate" role="tab" aria-selected="false">أخبار القنصلية</button>
+        <button type="button" class="news-filter" data-news-filter="ministry" role="tab" aria-selected="false">أخبار الوزارة</button>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card news-card--featured" data-news-card data-news-category="consulate">
+          <div class="news-card__media">
+            <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2024-02-01">2024/2/1</time>
+              <span class="news-card__pin" aria-label="خبر مميز">
+                <iconify-icon icon="solar:pin-bold" class="icon icon--sm"></iconify-icon>
+              </span>
+            </div>
+          </div>
+          <div class="news-card__body">
+            <h2 class="news-card__title">إعلان جديد من القنصلية المصرية بشأن مواعيد العمل في رمضان</h2>
+            <p class="news-card__excerpt">
+              تُعلن القنصلية عن تحديث مواعيد العمل الرسمية خلال شهر رمضان المبارك بما يضمن استمرار تقديم الخدمات للمواطنين.
+              <span class="news-card__more">المزيد</span>
+            </p>
+            <div class="news-card__footer">
+              <div class="news-card__stats">
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                  112
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                  200
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
+                  200
+                </span>
+              </div>
+              <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card" data-news-card data-news-category="consulate">
+          <div class="news-card__media">
+            <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2024-01-28">2024/1/28</time>
+            </div>
+          </div>
+          <div class="news-card__body">
+            <h2 class="news-card__title">تمديد مواعيد استقبال الجمهور لخدمات الجوازات</h2>
+            <p class="news-card__excerpt">
+              أعلنت القنصلية عن تمديد ساعات العمل لاستقبال طلبات تجديد الجوازات خلال الأسبوع الحالي.
+              <span class="news-card__more">المزيد</span>
+            </p>
+            <div class="news-card__footer">
+              <div class="news-card__stats">
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                  86
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                  145
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
+                  180
+                </span>
+              </div>
+              <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card" data-news-card data-news-category="ministry">
+          <div class="news-card__media">
+            <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2024-01-25">2024/1/25</time>
+            </div>
+          </div>
+          <div class="news-card__body">
+            <h2 class="news-card__title">وزارة الخارجية تطلق مبادرة رقمية جديدة للمصريين بالخارج</h2>
+            <p class="news-card__excerpt">
+              مبادرة تهدف إلى تسهيل الإجراءات القنصلية وتحسين تجربة المواطنين عبر المنصات الرقمية الموحدة.
+              <span class="news-card__more">المزيد</span>
+            </p>
+            <div class="news-card__footer">
+              <div class="news-card__stats">
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                  204
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                  320
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
+                  350
+                </span>
+              </div>
+              <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card" data-news-card data-news-category="consulate">
+          <div class="news-card__media">
+            <img src="https://placehold.co/400x400/fff/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2024-01-20">2024/1/20</time>
+            </div>
+          </div>
+          <div class="news-card__body">
+            <h2 class="news-card__title">القنصلية تنظم يوماً مفتوحاً للاستشارات القنصلية</h2>
+            <p class="news-card__excerpt">
+              فعالية مخصصة للإجابة على استفسارات المواطنين بشأن المعاملات القنصلية والوثائق المطلوبة.
+              <span class="news-card__more">المزيد</span>
+            </p>
+            <div class="news-card__footer">
+              <div class="news-card__stats">
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                  67
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                  98
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
+                  120
+                </span>
+              </div>
+              <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card" data-news-card data-news-category="ministry">
+          <div class="news-card__media">
+            <img src="https://placehold.co/400x400/fff/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2024-01-15">2024/1/15</time>
+            </div>
+          </div>
+          <div class="news-card__body">
+            <h2 class="news-card__title">تحديثات جديدة على سياسات توثيق الوثائق للمصريين في الخارج</h2>
+            <p class="news-card__excerpt">
+              وزارة الخارجية توضح الإجراءات المحدثة لتوثيق الشهادات والوكالات عبر البعثات الدبلوماسية.
+              <span class="news-card__more">المزيد</span>
+            </p>
+            <div class="news-card__footer">
+              <div class="news-card__stats">
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                  91
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                  176
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
+                  200
+                </span>
+              </div>
+              <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card" data-news-card data-news-category="ministry">
+          <div class="news-card__media">
+            <img src="https://placehold.co/400x400/fff/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <div class="news-card__meta">
+              <time class="news-card__date" datetime="2024-01-10">2024/1/10</time>
+            </div>
+          </div>
+          <div class="news-card__body">
+            <h2 class="news-card__title">تعزيز التعاون القنصلي لخدمة الجاليات المصرية حول العالم</h2>
+            <p class="news-card__excerpt">
+              بيان رسمي يستعرض جهود الوزارة لتطوير الخدمات القنصلية وتوسيع قنوات التواصل مع المواطنين.
+              <span class="news-card__more">المزيد</span>
+            </p>
+            <div class="news-card__footer">
+              <div class="news-card__stats">
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                  58
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                  132
+                </span>
+                <span class="news-card__stat">
+                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
+                  150
+                </span>
+              </div>
+              <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="news-empty" data-news-empty hidden>
+        <img src="assets/images/rafiki.png" alt="" class="news-empty__image" width="220" height="140" />
+        <h2 class="news-empty__title">لا توجد أخبار</h2>
+        <p class="news-empty__text">لا توجد أخبار في هذا التصنيف حالياً، جرّب تصفية أخرى أو عد لاحقاً.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__column site-footer__column--brand">
+        <a href="home.html" class="site-footer__logo">
+          <img src="assets/images/logo.png" alt="" class="site-footer__logo-img" width="48" height="48" />
+          <span class="site-footer__logo-text">مصري بالخارج</span>
+        </a>
+        <p class="site-footer__about">
+          منصة رقمية متكاملة تقدم خدمات قنصلية للمصريين في الخارج بسهولة وأمان، أينما كنت حول العالم.
+        </p>
+        <div class="site-footer__social">
+          <a href="#" class="site-footer__social-link" aria-label="إكس">
+            <iconify-icon icon="mdi:twitter" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="إنستغرام">
+            <iconify-icon icon="mdi:instagram" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="فيسبوك">
+            <iconify-icon icon="mdi:facebook" class="icon"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">روابط سريعة</h3>
+        <ul class="site-footer__list">
+          <li><a href="home.html">الرئيسية</a></li>
+          <li><a href="news.html" class="is-active" aria-current="page">الاخبار</a></li>
+          <li><a href="#">اداره افراد الاسره</a></li>
+          <li><a href="request-tracking.html">تتبع الطلبات</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الخدمات</h3>
+        <ul class="site-footer__list">
+          <li><a href="#">الطلبات الخارجية</a></li>
+          <li><a href="#">اضافة ابن / ابنة</a></li>
+          <li><a href="social-media-transactions.html">معاملات سوشيال ميديا</a></li>
+          <li><a href="transaction-fees.html">رسوم المعاملات</a></li>
+          <li><a href="working-hours.html">ايام العمل والاجازات</a></li>
+          <li><a href="#">الاخبار المفضلة</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الدعم</h3>
+        <ul class="site-footer__list">
+          <li><a href="faq.html">الاسئلة الشائعة</a></li>
+          <li><a href="complaints.html">الشكاوي و المقترحات</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© 2026 مصري بالخارج. جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <a href="#" class="chat-fab" aria-label="المساعد الذكي">
+    <iconify-icon icon="mdi:robot-outline" class="icon icon--lg"></iconify-icon>
+  </a>
+
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/news.js"></script>
+</body>
+</html>

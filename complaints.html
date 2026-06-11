@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الشكاوى والمقترحات | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/faq.css" />
+  <link rel="stylesheet" href="assets/css/complaints.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="complaints-page antialiased">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="home.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="" class="site-logo__img" width="40" height="40" />
+        <span class="site-logo__text">مصري بالخارج</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <div class="site-nav__drawer-head">
+          <span class="site-nav__drawer-title">القائمة</span>
+          <button type="button" class="site-nav__close" data-sidebar-close aria-label="إغلاق القائمة">
+            <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+          </button>
+        </div>
+        <a href="home.html" class="site-nav__link">الرئيسية</a>
+        <a href="news.html" class="site-nav__link">الأخبار</a>
+        <a href="request-tracking.html" class="site-nav__link">تتبع الطلب</a>
+        <a href="#" class="site-nav__link">إدارة أفراد الأسرة</a>
+
+        <div class="header-dropdown nav-dropdown">
+          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+            معلومات القنصلية
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel" hidden>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link">الخدمات الإلكترونية</a>
+              <a href="#" class="header-dropdown__link">الوثائق المطلوبة</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-dropdown nav-dropdown">
+          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+            تواصل معنا
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel" hidden>
+            <div class="header-dropdown__body">
+              <a href="faq.html" class="header-dropdown__link">الأسئلة الشائعة</a>
+              <a href="complaints.html" class="header-dropdown__link">الشكاوى والمقترحات</a>
+              <a href="home.html#location-title" class="header-dropdown__link">موقع القنصلية</a>
+            </div>
+          </div>
+        </div>
+        <div class="site-nav__drawer-footer">
+          <a href="#" class="btn-outline site-nav__login auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="notifications.html" class="icon-btn text-[#111111] w-[24px] h-[24px]" aria-label="الإشعارات">
+          <iconify-icon icon="mdi:bell-notification-outline" class="icon text-[20px]"></iconify-icon>
+        </a>
+
+        <div class="header-dropdown lang-dropdown w-[24px] h-[24px] text-[#111111] flex items-center justify-center">
+          <button
+            type="button"
+            class="lang-dropdown__toggle"
+            id="lang-toggle"
+            aria-label="اللغة"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <iconify-icon icon="iconoir:language" class="icon text-[20px] text-[#111111]"></iconify-icon>
+            <iconify-icon icon="mdi:chevron-down" class="lang-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel lang-dropdown__panel" id="lang-menu" role="listbox" aria-labelledby="lang-toggle" hidden>
+            <div class="header-dropdown__body">
+              <button type="button" class="header-dropdown__link-btn" data-lang="ar" role="option" aria-selected="false">العربية</button>
+              <button type="button" class="header-dropdown__link-btn" data-lang="en" role="option" aria-selected="false">English</button>
+            </div>
+          </div>
+        </div>
+
+        <span class="site-header__divider" aria-hidden="true"></span>
+
+        <a href="#" class="btn-outline auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+
+        <div class="header-dropdown user-dropdown auth-user" hidden>
+          <button type="button" class="user-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-label="حسابي">
+            <span class="user-dropdown__avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <iconify-icon icon="mdi:chevron-down" class="user-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel user-dropdown__panel" hidden>
+            <div class="user-dropdown__info">
+              <strong class="user-dropdown__name">محمد عوض    </strong>
+              <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
+            </div>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link header-dropdown__link--icon">
+                <iconify-icon icon="mdi:account-switch-outline" class="icon"></iconify-icon>
+                تبديل الحساب
+              </a>
+              <button type="button" class="header-dropdown__link header-dropdown__link--danger header-dropdown__link--icon" data-auth-toggle="logout">
+                <iconify-icon icon="mdi:logout" class="icon"></iconify-icon>
+                تسجيل الخروج
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="site-header__menu-toggle" data-sidebar-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <iconify-icon icon="mdi:menu" class="icon"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <button type="button" class="site-sidebar-overlay" data-sidebar-overlay hidden aria-label="إغلاق القائمة"></button>
+
+  <section class="faq-hero">
+    <div class="faq-hero__inner">
+      <h1 class="faq-hero__title">الشكاوى والمقترحات</h1>
+      <nav class="faq-breadcrumb" aria-label="مسار التنقل">
+        <a href="home.html">الرئيسية</a>
+        <span class="faq-breadcrumb__sep" aria-hidden="true">
+          <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
+        </span>
+        <span class="faq-breadcrumb__current" aria-current="page">الشكاوى والمقترحات</span>
+      </nav>
+    </div>
+  </section>
+
+  <main class="complaints-main">
+    <div class="complaints-main__inner">
+      <div class="complaints-card">
+        <form class="complaints-form" action="#" method="post">
+          <div class="complaints-field">
+            <label for="request-type" class="complaints-field__label">نوع الطلب</label>
+            <div class="complaints-field__control complaints-field__select-wrap">
+              <select id="request-type" name="request-type" class="complaints-field__select" required>
+                <option value="" disabled selected>اختر نوع الطلب</option>
+                <option value="complaint">شكوى</option>
+                <option value="suggestion">مقترح</option>
+                <option value="inquiry">استفسار</option>
+              </select>
+              <iconify-icon icon="mdi:chevron-down" class="icon icon--sm complaints-field__icon complaints-field__icon--start" aria-hidden="true"></iconify-icon>
+              <iconify-icon icon="mdi:file-document-outline" class="icon icon--sm complaints-field__icon" aria-hidden="true"></iconify-icon>
+            </div>
+          </div>
+
+          <div class="complaints-field">
+            <label for="request-title" class="complaints-field__label">عنوان الطلب</label>
+            <div class="complaints-field__control">
+              <input
+                type="text"
+                id="request-title"
+                name="request-title"
+                class="complaints-field__input"
+                placeholder="ادخل عنوان الطلب"
+                required
+              />
+              <iconify-icon icon="mdi:pencil-outline" class="icon icon--sm complaints-field__icon" aria-hidden="true"></iconify-icon>
+            </div>
+          </div>
+
+          <div class="complaints-field">
+            <label for="request-details" class="complaints-field__label">تفاصيل الطلب</label>
+            <div class="complaints-field__control">
+              <textarea
+                id="request-details"
+                name="request-details"
+                class="complaints-field__textarea"
+                placeholder="اكتب رسالتك"
+                required
+              ></textarea>
+              <iconify-icon icon="mdi:message-text-outline" class="icon icon--sm complaints-field__icon complaints-field__icon--textarea" aria-hidden="true"></iconify-icon>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary complaints-form__submit">ارسال الطلب</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__column site-footer__column--brand">
+        <a href="home.html" class="site-footer__logo">
+          <img src="assets/images/logo.png" alt="" class="site-footer__logo-img" width="48" height="48" />
+          <span class="site-footer__logo-text">مصري بالخارج</span>
+        </a>
+        <p class="site-footer__about">
+          منصة رقمية متكاملة تقدم خدمات قنصلية للمصريين في الخارج بسهولة وأمان، أينما كنت حول العالم.
+        </p>
+        <div class="site-footer__social">
+          <a href="#" class="site-footer__social-link" aria-label="إكس">
+            <iconify-icon icon="mdi:twitter" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="إنستغرام">
+            <iconify-icon icon="mdi:instagram" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="فيسبوك">
+            <iconify-icon icon="mdi:facebook" class="icon"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">روابط سريعة</h3>
+        <ul class="site-footer__list">
+          <li><a href="home.html">الرئيسية</a></li>
+          <li><a href="news.html">الاخبار</a></li>
+          <li><a href="#">اداره افراد الاسره</a></li>
+          <li><a href="request-tracking.html">تتبع الطلبات</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الخدمات</h3>
+        <ul class="site-footer__list">
+          <li><a href="#">الطلبات الخارجية</a></li>
+          <li><a href="#">اضافة ابن / ابنة</a></li>
+          <li><a href="social-media-transactions.html">معاملات سوشيال ميديا</a></li>
+          <li><a href="transaction-fees.html">رسوم المعاملات</a></li>
+          <li><a href="working-hours.html">ايام العمل والاجازات</a></li>
+          <li><a href="#">الاخبار المفضلة</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الدعم</h3>
+        <ul class="site-footer__list">
+          <li><a href="faq.html">الاسئلة الشائعة</a></li>
+          <li><a href="complaints.html" class="is-active" aria-current="page">الشكاوي و المقترحات</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© 2026 مصري بالخارج. جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <a href="#" class="chat-fab" aria-label="المساعد الذكي">
+    <iconify-icon icon="mdi:robot-outline" class="icon icon--lg"></iconify-icon>
+  </a>
+
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

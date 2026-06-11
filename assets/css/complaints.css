@@ -1,0 +1,140 @@
+/* Complaints page */
+
+.complaints-page {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.complaints-main {
+  padding: 0 1.25rem 4rem;
+  background-color: #f7f7f7;
+}
+
+.complaints-main__inner {
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.complaints-card {
+  border: 1px solid #ececec;
+  border-radius: 1rem;
+  background-color: #fff;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 24px rgba(17, 24, 39, 0.05);
+  margin-top: 20px;
+}
+
+.complaints-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.complaints-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.complaints-field__label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: #111111;
+  text-align: start;
+}
+
+.complaints-field__control {
+  position: relative;
+}
+
+.complaints-field__icon {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 1rem;
+  inset-inline-end: auto;
+  transform: translateY(-50%);
+  color: #120e06;
+  pointer-events: none;
+}
+
+.complaints-field__icon--textarea {
+  top: 1rem;
+  transform: none;
+}
+
+.complaints-field__input,
+.complaints-field__select,
+.complaints-field__textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: #111111;
+  text-align: start;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.complaints-field__input,
+.complaints-field__select {
+  min-height: 3rem;
+  padding-block: 0.75rem;
+  padding-inline-start: 3rem;
+  padding-inline-end: 1rem;
+}
+
+.complaints-field__select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.complaints-field__select-wrap .complaints-field__select {
+  padding-inline-end: 2.75rem;
+}
+
+.complaints-field__select-wrap .complaints-field__icon--start {
+  inset-inline-start: auto;
+  inset-inline-end: 1rem;
+  color: #120e06;
+}
+
+.complaints-field__textarea {
+  min-height: 9rem;
+  padding-block: 0.875rem;
+  padding-inline-start: 3rem;
+  padding-inline-end: 1rem;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.complaints-field__input::placeholder,
+.complaints-field__textarea::placeholder {
+  color: #9ca3af;
+}
+
+.complaints-field__input:focus,
+.complaints-field__select:focus,
+.complaints-field__textarea:focus {
+  border-color: #b9852c;
+  box-shadow: 0 0 0 3px rgba(185, 133, 44, 0.1);
+}
+
+.complaints-form__submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  min-height: 3rem;
+  border-radius: 10px;
+  font-size: var(--text-sm);
+}
+
+@media (min-width: 768px) {
+  .complaints-main {
+    padding: 0 2rem 5rem;
+  }
+
+  .complaints-card {
+    padding: 2rem;
+  }
+}

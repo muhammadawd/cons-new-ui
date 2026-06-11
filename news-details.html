@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تفاصيل الخبر | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/faq.css" />
+  <link rel="stylesheet" href="assets/css/news-details.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="news-details-page antialiased">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="home.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="" class="site-logo__img" width="40" height="40" />
+        <span class="site-logo__text">مصري بالخارج</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <div class="site-nav__drawer-head">
+          <span class="site-nav__drawer-title">القائمة</span>
+          <button type="button" class="site-nav__close" data-sidebar-close aria-label="إغلاق القائمة">
+            <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+          </button>
+        </div>
+        <a href="home.html" class="site-nav__link">الرئيسية</a>
+        <a href="news.html" class="site-nav__link site-nav__link--active">الأخبار</a>
+        <a href="request-tracking.html" class="site-nav__link">تتبع الطلب</a>
+        <a href="#" class="site-nav__link">إدارة أفراد الأسرة</a>
+
+        <div class="header-dropdown nav-dropdown">
+          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+            معلومات القنصلية
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel" hidden>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link">الخدمات الإلكترونية</a>
+              <a href="#" class="header-dropdown__link">الوثائق المطلوبة</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-dropdown nav-dropdown">
+          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+            تواصل معنا
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel" hidden>
+            <div class="header-dropdown__body">
+              <a href="faq.html" class="header-dropdown__link">الأسئلة الشائعة</a>
+              <a href="complaints.html" class="header-dropdown__link">الشكاوى والمقترحات</a>
+              <a href="home.html#location-title" class="header-dropdown__link">موقع القنصلية</a>
+            </div>
+          </div>
+        </div>
+        <div class="site-nav__drawer-footer">
+          <a href="#" class="btn-outline site-nav__login auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="notifications.html" class="icon-btn text-[#111111] w-[24px] h-[24px]" aria-label="الإشعارات">
+          <iconify-icon icon="mdi:bell-notification-outline" class="icon text-[20px]"></iconify-icon>
+        </a>
+
+        <div class="header-dropdown lang-dropdown w-[24px] h-[24px] text-[#111111] flex items-center justify-center">
+          <button type="button" class="lang-dropdown__toggle" id="lang-toggle" aria-label="اللغة" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+            <iconify-icon icon="iconoir:language" class="icon text-[20px] text-[#111111]"></iconify-icon>
+            <iconify-icon icon="mdi:chevron-down" class="lang-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel lang-dropdown__panel" id="lang-menu" role="listbox" aria-labelledby="lang-toggle" hidden>
+            <div class="header-dropdown__body">
+              <button type="button" class="header-dropdown__link-btn" data-lang="ar" role="option" aria-selected="false">العربية</button>
+              <button type="button" class="header-dropdown__link-btn" data-lang="en" role="option" aria-selected="false">English</button>
+            </div>
+          </div>
+        </div>
+
+        <span class="site-header__divider" aria-hidden="true"></span>
+
+        <a href="#" class="btn-outline auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+
+        <div class="header-dropdown user-dropdown auth-user" hidden>
+          <button type="button" class="user-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-label="حسابي">
+            <span class="user-dropdown__avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <iconify-icon icon="mdi:chevron-down" class="user-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel user-dropdown__panel" hidden>
+            <div class="user-dropdown__info">
+              <strong class="user-dropdown__name"> محمد عوض    </strong>
+              <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
+            </div>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link header-dropdown__link--icon">
+                <iconify-icon icon="mdi:account-switch-outline" class="icon"></iconify-icon>
+                تبديل الحساب
+              </a>
+              <button type="button" class="header-dropdown__link header-dropdown__link--danger header-dropdown__link--icon" data-auth-toggle="logout">
+                <iconify-icon icon="mdi:logout" class="icon"></iconify-icon>
+                تسجيل الخروج
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="site-header__menu-toggle" data-sidebar-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <iconify-icon icon="mdi:menu" class="icon"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <button type="button" class="site-sidebar-overlay" data-sidebar-overlay hidden aria-label="إغلاق القائمة"></button>
+
+  <section class="faq-hero">
+    <div class="faq-hero__inner">
+      <h1 class="faq-hero__title">تفاصيل الخبر</h1>
+      <nav class="faq-breadcrumb" aria-label="مسار التنقل">
+        <a href="home.html">الرئيسية</a>
+        <span class="faq-breadcrumb__sep" aria-hidden="true">
+          <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
+        </span>
+        <a href="news.html">الأخبار</a>
+        <span class="faq-breadcrumb__sep" aria-hidden="true">
+          <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
+        </span>
+        <span class="faq-breadcrumb__current" aria-current="page">تفاصيل الخبر</span>
+      </nav>
+    </div>
+  </section>
+
+  <main class="news-details-main">
+    <div class="news-details-main__inner pt-10">
+      <div class="news-details__layout">
+        <article class="news-details__article">
+          <div class="news-details__article-inner">
+            <span class="news-details__badge">
+              <span class="news-details__badge-dot" aria-hidden="true"></span>
+              أخبار القنصلية
+            </span>
+
+            <img
+              src="https://placehold.co/800x450/fff/31343C"
+              alt=""
+              class="news-details__image"
+              width="800"
+              height="450"
+            />
+
+            <h2 class="news-details__title">إعلان جديد من القنصلية المصرية بشأن مواعيد العمل في رمضان</h2>
+
+            <div class="news-details__meta">
+              <time class="news-details__date" datetime="2024-02-01">2024/2/1</time>
+              <div class="news-details__stats">
+                <span class="news-details__stat">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                  112
+                </span>
+                <span class="news-details__stat">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                  200
+                </span>
+              </div>
+            </div>
+
+            <div class="news-details__body">
+              <p>
+                تُعلن القنصلية العامة لجمهورية مصر العربية عن تحديث مواعيد العمل الرسمية خلال شهر رمضان المبارك، وذلك بما يضمن استمرار تقديم الخدمات القنصلية للمواطنين المصريين في الخارج بكل يسر وسهولة.
+              </p>
+              <p>
+                وقد تم اعتماد جدول عمل مُعدَّل يتضمن ساعات استقبال الجمهور صباحاً ومساءً، مع الإبقاء على قنوات الحجز الإلكتروني متاحة على مدار الساعة لطلبات الخدمات التي لا تتطلب الحضور الشخصي.
+              </p>
+              <p>تشمل الخدمات الإلكترونية المتاحة خلال الفترة القادمة:</p>
+              <ul>
+                <li>تجديد جوازات السفر وإصدار بدل فاقد أو تالف.</li>
+                <li>توثيق الشهادات والوكالات والمستندات الرسمية.</li>
+                <li>تسجيل المواليد والزواج والوفيات للمصريين بالخارج.</li>
+                <li>إصدار شهادات الحالة الجنائية والتصديقات القنصلية.</li>
+                <li>متابعة حالة الطلبات عبر المنصة الرقمية.</li>
+              </ul>
+              <p>
+                تدعو القنصلية المواطنين الكرام إلى الاطلاع على الجدول المُحدَّث عبر الموقع الرسمي والتسجيل المسبق للمواعيد لتفادي الازدحام، مع التأكيد على ضرورة إحضار الوثائق المطلوبة كاملة عند الحضور.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <aside class="news-details__sidebar" aria-labelledby="related-news-title">
+          <div class="news-details__sidebar-header">
+            <iconify-icon icon="solar:document-text-linear" class="icon icon--sm"></iconify-icon>
+            <h2 id="related-news-title">أخبار ذات صلة</h2>
+          </div>
+
+          <ul class="news-details__related-list">
+            <li class="news-details__related-item">
+              <a href="news-details.html" class="news-details__related-link">
+                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
+                <div class="news-details__related-content">
+                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
+                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
+                </div>
+              </a>
+            </li>
+            <li class="news-details__related-item">
+              <a href="news-details.html" class="news-details__related-link">
+                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
+                <div class="news-details__related-content">
+                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
+                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
+                </div>
+              </a>
+            </li>
+            <li class="news-details__related-item">
+              <a href="news-details.html" class="news-details__related-link">
+                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
+                <div class="news-details__related-content">
+                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
+                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
+                </div>
+              </a>
+            </li>
+            <li class="news-details__related-item">
+              <a href="news-details.html" class="news-details__related-link">
+                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
+                <div class="news-details__related-content">
+                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
+                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="news-details__sidebar-footer">
+            <a href="news.html" class="news-details__all-btn">عرض جميع الأخبار</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__column site-footer__column--brand">
+        <a href="home.html" class="site-footer__logo">
+          <img src="assets/images/logo.png" alt="" class="site-footer__logo-img" width="48" height="48" />
+          <span class="site-footer__logo-text">مصري بالخارج</span>
+        </a>
+        <p class="site-footer__about">
+          منصة رقمية متكاملة تقدم خدمات قنصلية للمصريين في الخارج بسهولة وأمان، أينما كنت حول العالم.
+        </p>
+        <div class="site-footer__social">
+          <a href="#" class="site-footer__social-link" aria-label="إكس">
+            <iconify-icon icon="mdi:twitter" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="إنستغرام">
+            <iconify-icon icon="mdi:instagram" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="فيسبوك">
+            <iconify-icon icon="mdi:facebook" class="icon"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">روابط سريعة</h3>
+        <ul class="site-footer__list">
+          <li><a href="home.html">الرئيسية</a></li>
+          <li><a href="news.html" class="is-active" aria-current="page">الاخبار</a></li>
+          <li><a href="#">اداره افراد الاسره</a></li>
+          <li><a href="request-tracking.html">تتبع الطلبات</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الخدمات</h3>
+        <ul class="site-footer__list">
+          <li><a href="#">الطلبات الخارجية</a></li>
+          <li><a href="#">اضافة ابن / ابنة</a></li>
+          <li><a href="social-media-transactions.html">معاملات سوشيال ميديا</a></li>
+          <li><a href="transaction-fees.html">رسوم المعاملات</a></li>
+          <li><a href="working-hours.html">ايام العمل والاجازات</a></li>
+          <li><a href="#">الاخبار المفضلة</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الدعم</h3>
+        <ul class="site-footer__list">
+          <li><a href="faq.html">الاسئلة الشائعة</a></li>
+          <li><a href="complaints.html">الشكاوي و المقترحات</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© 2026 مصري بالخارج. جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <a href="#" class="chat-fab" aria-label="المساعد الذكي">
+    <iconify-icon icon="mdi:robot-outline" class="icon icon--lg"></iconify-icon>
+  </a>
+
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

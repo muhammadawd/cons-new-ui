@@ -1,0 +1,68 @@
+/* Transaction fees page — extends FAQ layout */
+
+.fees-page {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.fees-item__panel {
+  padding-top: 0;
+}
+
+.fees-item__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #fafafa;
+}
+
+.fees-item__label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: #111111;
+}
+
+.fees-item__amount {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: #111111;
+  direction: ltr;
+  white-space: nowrap;
+}
+
+.faq-item__icons {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-item__icon--open {
+  display: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  color: #b9852c;
+}
+
+.faq-item--open .faq-item__icon--closed {
+  display: none;
+}
+
+.faq-item--open .faq-item__icon--open {
+  display: block;
+}
+
+.fees-page .faq-item__icon {
+  transition: color 0.15s ease;
+}
+
+.fees-page .faq-item--open .faq-item__icon {
+  transform: none;
+}
+
+.fees-page .faq-item--open .faq-item__icon--open {
+  color: #b9852c;
+}

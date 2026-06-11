@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اختر الدولة | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="h-dvh min-h-screen overflow-hidden bg-[#f7f7f7] text-gray-900 antialiased">
+
+  <main class="h-dvh min-h-screen">
+    <article class="h-full min-h-screen">
+      <div class="flex h-full min-h-screen flex-col lg:flex-row">
+
+        <section class="selection-panel order-1 flex min-h-0 flex-1 flex-col overflow-y-auto bg-[#f7f7f7] px-5 py-8 sm:px-8 sm:py-10 lg:order-2 lg:px-12 lg:py-12 xl:px-16" aria-labelledby="country-heading">
+          <h2 id="country-heading" class="page-heading">
+            اختر دولة إقامتك للمتابعة:
+          </h2>
+
+          <div class="search-box" dir="rtl">
+            <label for="country-search" class="sr-only">ابحث</label>
+            <input
+              id="country-search"
+              type="search"
+              data-search
+              placeholder="ابحث"
+              class="search-field"
+            />
+            <span class="search-box__label" aria-hidden="true">
+              <iconify-icon icon="iconamoon:search-light" class="icon"></iconify-icon>
+              <span>ابحث</span>
+            </span>
+          </div>
+
+          <div class="options-grid">
+            <a data-option href="select-city.html?country=ae" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">دولة الإمارات العربية المتحدة</span>
+            </a>
+            <a data-option href="select-city.html?country=bh" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">مملكة البحرين</span>
+            </a>
+            <a data-option href="select-city.html?country=qa" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">دولة قطر</span>
+            </a>
+            <a data-option href="select-city.html?country=sa" class="option-link" aria-current="page">
+              <span class="option-radio" aria-hidden="true">
+                <iconify-icon icon="mdi:check" class="icon icon--sm"></iconify-icon>
+              </span>
+              <span class="option-link__label">المملكة العربية السعودية</span>
+            </a>
+            <a data-option href="select-city.html?country=kw" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">دولة الكويت</span>
+            </a>
+            <a data-option href="select-city.html?country=om" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">سلطنة عُمان</span>
+            </a>
+            <a data-option href="select-city.html?country=jo" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">المملكة الأردنية الهاشمية</span>
+            </a>
+            <a data-option href="select-city.html?country=lb" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">الجمهورية اللبنانية</span>
+            </a>
+            <a data-option href="select-city.html?country=iq" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">جمهورية العراق</span>
+            </a>
+            <a data-option href="select-city.html?country=ye" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">الجمهورية اليمنية</span>
+            </a>
+            <a data-option href="select-city.html?country=sd" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">جمهورية السودان</span>
+            </a>
+            <a data-option href="select-city.html?country=ly" class="option-link">
+              <span class="option-radio" aria-hidden="true"></span>
+              <span class="option-link__label">دولة ليبيا</span>
+            </a>
+          </div>
+
+        </section>
+
+        <aside class="branding-panel order-2 lg:order-1" aria-label="مصري بالخارج">
+          <div class="branding-panel__circle branding-panel__circle--start" aria-hidden="true"></div>
+          <div class="branding-panel__circle branding-panel__circle--end" aria-hidden="true"></div>
+
+          <div class="branding-panel__content">
+            <p class="branding-panel__welcome">أهلاً بك في</p>
+
+            <div class="branding-panel__brand-row">
+              <img src="assets/images/logo.png" alt="" class="branding-panel__logo" width="55" height="55" />
+              <p class="branding-panel__title">مصري بالخارج</p>
+            </div>
+          </div>
+
+          <p class="branding-panel__tagline">
+            نسعد بخدمتك في أي مكان حول العالم
+          </p>
+        </aside>
+
+      </div>
+    </article>
+  </main>
+
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>

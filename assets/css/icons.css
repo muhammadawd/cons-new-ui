@@ -1,0 +1,30 @@
+/* Iconify — iconamoon & mdi */
+
+iconify-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+iconify-icon.icon {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iconify-icon.icon--sm {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+
+iconify-icon.icon--lg {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 1;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="h-dvh min-h-screen overflow-hidden bg-[#f7f7f7] text-gray-900 antialiased">
+
+  <main class="h-dvh min-h-screen">
+    <article class="h-full min-h-screen">
+      <div class="flex h-full min-h-screen flex-col lg:flex-row">
+
+        <section class="landing-panel order-1 lg:order-2" aria-labelledby="landing-heading">
+          <div class="landing-panel__inner">
+            <h1 id="landing-heading" class="landing-panel__heading">
+              مرحباً بك في منصة مصري بالخارج
+            </h1>
+            <p class="landing-panel__text">
+              ابدأ باختيار دولة إقامتك ثم المدينة للمتابعة والاستفادة من خدماتنا في أي مكان حول العالم.
+            </p>
+            <a href="select-country.html" class="btn-primary">
+              ابدأ التسجيل الآن
+              <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon" aria-hidden="true"></iconify-icon>
+            </a>
+            <p class="page-help">
+              <a href="news.html">أحدث الأخبار</a>
+              <span aria-hidden="true"> · </span>
+              <a href="faq.html">الأسئلة الشائعة</a>
+              <span aria-hidden="true"> · </span>
+              <a href="complaints.html">الشكاوى والمقترحات</a>
+            </p>
+          </div>
+        </section>
+
+        <aside class="branding-panel order-2 lg:order-1" aria-label="مصري بالخارج">
+          <div class="branding-panel__circle branding-panel__circle--start" aria-hidden="true"></div>
+          <div class="branding-panel__circle branding-panel__circle--end" aria-hidden="true"></div>
+
+          <div class="branding-panel__content">
+            <p class="branding-panel__welcome">أهلاً بك في</p>
+
+            <div class="branding-panel__brand-row">
+              <img src="assets/images/logo.png" alt="" class="branding-panel__logo" width="55" height="55" />
+              <p class="branding-panel__title">مصري بالخارج</p>
+            </div>
+          </div>
+
+          <p class="branding-panel__tagline">
+            نسعد بخدمتك في أي مكان حول العالم
+          </p>
+        </aside>
+
+      </div>
+    </article>
+  </main>
+
+</body>
+</html>
