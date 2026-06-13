@@ -27,44 +27,49 @@
 
       <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
         <div class="site-nav__drawer-head">
-          <span class="site-nav__drawer-title">القائمة</span>
-          <button type="button" class="site-nav__close" data-sidebar-close aria-label="إغلاق القائمة">
-            <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+          <button type="button" class="site-nav__back" data-sidebar-close aria-label="إغلاق القائمة">
+            <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
           </button>
-        </div>
-        <a href="home.html" class="site-nav__link">الرئيسية</a>
-        <a href="news.html" class="site-nav__link">الأخبار</a>
-        <a href="request-tracking.html" class="site-nav__link site-nav__link--active" aria-current="page">تتبع الطلب</a>
-        <a href="#" class="site-nav__link">إدارة أفراد الأسرة</a>
-
-        <div class="header-dropdown nav-dropdown">
-          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
-            معلومات القنصلية
-            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
-          </button>
-          <div class="header-dropdown__panel" hidden>
-            <div class="header-dropdown__body">
-              <a href="#" class="header-dropdown__link">الخدمات الإلكترونية</a>
-              <a href="#" class="header-dropdown__link">الوثائق المطلوبة</a>
-            </div>
-          </div>
+          <a href="#" class="site-nav__drawer-login auth-guest" data-auth-toggle="login">
+            <span class="site-nav__drawer-avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            تسجيل الدخول
+          </a>
         </div>
 
-        <div class="header-dropdown nav-dropdown">
-          <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
-            تواصل معنا
-            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
-          </button>
-          <div class="header-dropdown__panel" hidden>
-            <div class="header-dropdown__body">
-              <a href="faq.html" class="header-dropdown__link">الأسئلة الشائعة</a>
-              <a href="complaints.html" class="header-dropdown__link">الشكاوى والمقترحات</a>
-              <a href="home.html#location-title" class="header-dropdown__link">موقع القنصلية</a>
+        <div class="site-nav__drawer-body">
+          <a href="home.html" class="site-nav__link">الرئيسية</a>
+          <a href="news.html" class="site-nav__link">الأخبار</a>
+          <a href="request-tracking.html" class="site-nav__link site-nav__link--active" aria-current="page">تتبع الطلب</a>
+          <a href="family-management.html" class="site-nav__link">إدارة أفراد الأسرة</a>
+
+          <div class="header-dropdown nav-dropdown">
+            <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+              معلومات القنصلية
+              <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+            </button>
+            <div class="header-dropdown__panel" hidden>
+              <div class="header-dropdown__body">
+                <a href="#" class="header-dropdown__link">الخدمات الإلكترونية</a>
+                <a href="#" class="header-dropdown__link">الوثائق المطلوبة</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="site-nav__drawer-footer">
-          <a href="#" class="btn-outline site-nav__login auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+
+          <div class="header-dropdown nav-dropdown">
+            <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+              تواصل معنا
+              <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+            </button>
+            <div class="header-dropdown__panel" hidden>
+              <div class="header-dropdown__body">
+                <a href="faq.html" class="header-dropdown__link">الأسئلة الشائعة</a>
+                <a href="complaints.html" class="header-dropdown__link">الشكاوى والمقترحات</a>
+                <a href="home.html#location-title" class="header-dropdown__link">موقع القنصلية</a>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -74,9 +79,17 @@
         </a>
 
         <div class="header-dropdown lang-dropdown w-[24px] h-[24px] text-[#111111] flex items-center justify-center">
-          <button type="button" class="lang-dropdown__toggle" id="lang-toggle" aria-label="اللغة" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+          <button
+            type="button"
+            class="lang-dropdown__toggle"
+            id="lang-toggle"
+            aria-label="اللغة"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
             <iconify-icon icon="iconoir:language" class="icon text-[20px] text-[#111111]"></iconify-icon>
-            <iconify-icon icon="mdi:chevron-down" class="lang-dropdown__chevron"></iconify-icon>
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
           </button>
           <div class="header-dropdown__panel lang-dropdown__panel" id="lang-menu" role="listbox" aria-labelledby="lang-toggle" hidden>
             <div class="header-dropdown__body">
@@ -116,7 +129,7 @@
         </div>
 
         <button type="button" class="site-header__menu-toggle" data-sidebar-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
-          <iconify-icon icon="mdi:menu" class="icon"></iconify-icon>
+          <iconify-icon icon="material-symbols:menu" class="icon"></iconify-icon>
         </button>
       </div>
     </div>

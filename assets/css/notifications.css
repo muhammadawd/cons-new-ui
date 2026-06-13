@@ -141,6 +141,36 @@
   white-space: nowrap;
 }
 
+@media (max-width: 1023px) {
+  .notifications-main {
+    padding: 0 1rem 3rem;
+  }
+
+  .notifications-filters {
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .notifications-filter {
+    padding: 0.5rem 0.875rem;
+    font-size: var(--text-xs);
+  }
+}
+
+@media (max-width: 639px) {
+  .notification-item {
+    flex-wrap: wrap;
+    gap: 0.375rem 0.75rem;
+    padding: 1rem;
+  }
+
+  .notification-item__time {
+    width: 100%;
+    text-align: start;
+    white-space: normal;
+  }
+}
+
 @media (min-width: 1024px) {
   .notifications-main {
     padding: 0 2rem 5rem;

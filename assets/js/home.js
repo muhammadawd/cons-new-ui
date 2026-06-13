@@ -2,7 +2,7 @@
   var openDropdown = null;
   var menuToggle = document.querySelector("[data-sidebar-toggle]");
   var sidebarOverlay = document.querySelector("[data-sidebar-overlay]");
-  var sidebarClose = document.querySelector("[data-sidebar-close]");
+  var sidebarClose = document.querySelectorAll("[data-sidebar-close]");
   var siteNav = document.getElementById("site-nav");
 
   function openSidebar() {
@@ -20,7 +20,8 @@
   }
 
   if (menuToggle && siteNav) {
-    menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
       if (document.body.classList.contains("site-sidebar-open")) {
         closeSidebar();
       } else {
@@ -33,8 +34,10 @@
     sidebarOverlay.addEventListener("click", closeSidebar);
   }
 
-  if (sidebarClose) {
-    sidebarClose.addEventListener("click", closeSidebar);
+  if (sidebarClose.length) {
+    sidebarClose.forEach(function (btn) {
+      btn.addEventListener("click", closeSidebar);
+    });
   }
 
   if (siteNav) {

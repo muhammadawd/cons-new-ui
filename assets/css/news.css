@@ -200,6 +200,36 @@
   background-color: #9a7124;
 }
 
+@media (max-width: 1023px) {
+  .news-main {
+    padding: 0 1rem 3rem;
+  }
+
+  .news-filters {
+    gap: 0.5rem;
+  }
+
+  .news-filter {
+    padding: 0.5rem 0.875rem;
+    font-size: var(--text-xs);
+  }
+
+  .news-card__body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card__footer {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
 @media (min-width: 640px) {
   .news-grid {
     grid-template-columns: repeat(2, 1fr);

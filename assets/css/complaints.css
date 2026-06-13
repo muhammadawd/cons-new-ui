@@ -129,6 +129,21 @@
   font-size: var(--text-sm);
 }
 
+@media (max-width: 1023px) {
+  .complaints-main {
+    padding: 0 1rem 3rem;
+  }
+
+  .complaints-card {
+    padding: 1.25rem 1rem;
+    border-radius: 0.875rem;
+  }
+
+  .complaints-form {
+    gap: 1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .complaints-main {
     padding: 0 2rem 5rem;

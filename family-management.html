@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تفاصيل الخبر | مصري بالخارج</title>
+  <title>اداره افراد الاسره | مصري بالخارج</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="assets/css/icons.css" />
   <link rel="stylesheet" href="assets/css/home.css" />
   <link rel="stylesheet" href="assets/css/faq.css" />
-  <link rel="stylesheet" href="assets/css/news-details.css" />
+  <link rel="stylesheet" href="assets/css/family-management.css" />
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
-<body class="news-details-page antialiased">
+<body class="fm-page faq-page antialiased">
 
   <header class="site-header">
     <div class="site-header__inner">
@@ -40,9 +40,9 @@
 
         <div class="site-nav__drawer-body">
           <a href="home.html" class="site-nav__link">الرئيسية</a>
-          <a href="news.html" class="site-nav__link site-nav__link--active">الأخبار</a>
+          <a href="news.html" class="site-nav__link">الأخبار</a>
           <a href="request-tracking.html" class="site-nav__link">تتبع الطلب</a>
-          <a href="family-management.html" class="site-nav__link">إدارة أفراد الأسرة</a>
+          <a href="family-management.html" class="site-nav__link site-nav__link--active" aria-current="page">إدارة أفراد الأسرة</a>
 
           <div class="header-dropdown nav-dropdown">
             <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
@@ -112,7 +112,7 @@
           </button>
           <div class="header-dropdown__panel user-dropdown__panel" hidden>
             <div class="user-dropdown__info">
-              <strong class="user-dropdown__name"> محمد عوض    </strong>
+              <strong class="user-dropdown__name">أحمد محمد محمود</strong>
               <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
             </div>
             <div class="header-dropdown__body">
@@ -139,129 +139,154 @@
 
   <section class="faq-hero">
     <div class="faq-hero__inner">
-      <h1 class="faq-hero__title">تفاصيل الخبر</h1>
+      <h1 class="faq-hero__title">اداره افراد الاسره</h1>
       <nav class="faq-breadcrumb" aria-label="مسار التنقل">
         <a href="home.html">الرئيسية</a>
         <span class="faq-breadcrumb__sep" aria-hidden="true">
           <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
         </span>
-        <a href="news.html">الأخبار</a>
-        <span class="faq-breadcrumb__sep" aria-hidden="true">
-          <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
-        </span>
-        <span class="faq-breadcrumb__current" aria-current="page">تفاصيل الخبر</span>
+        <span class="faq-breadcrumb__current" aria-current="page">اداره افراد الاسره</span>
       </nav>
     </div>
   </section>
 
-  <main class="news-details-main">
-    <div class="news-details-main__inner pt-10">
-      <div class="news-details__layout">
-        <article class="news-details__article">
-          <div class="news-details__article-inner">
-            <span class="news-details__badge">
-              <span class="news-details__badge-dot" aria-hidden="true"></span>
-              أخبار القنصلية
+  <main class="fm-main">
+    <div class="fm-main__inner">
+      <section class="fm-account" aria-label="الحساب الرئيسي">
+        <div class="fm-account__top">
+          <div class="fm-account__profile">
+            <span class="fm-account__avatar">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
             </span>
-
-            <img
-              src="https://placehold.co/800x450/fff/31343C"
-              alt=""
-              class="news-details__image"
-              width="800"
-              height="450"
-            />
-
-            <h2 class="news-details__title">إعلان جديد من القنصلية المصرية بشأن مواعيد العمل في رمضان</h2>
-
-            <div class="news-details__meta">
-              <time class="news-details__date" datetime="2024-02-01">2024/2/1</time>
-              <div class="news-details__stats">
-                <span class="news-details__stat">
-                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
-                  112
-                </span>
-                <span class="news-details__stat">
-                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
-                  200
-                </span>
-              </div>
-            </div>
-
-            <div class="news-details__body">
-              <p>
-                تُعلن القنصلية العامة لجمهورية مصر العربية عن تحديث مواعيد العمل الرسمية خلال شهر رمضان المبارك، وذلك بما يضمن استمرار تقديم الخدمات القنصلية للمواطنين المصريين في الخارج بكل يسر وسهولة.
-              </p>
-              <p>
-                وقد تم اعتماد جدول عمل مُعدَّل يتضمن ساعات استقبال الجمهور صباحاً ومساءً، مع الإبقاء على قنوات الحجز الإلكتروني متاحة على مدار الساعة لطلبات الخدمات التي لا تتطلب الحضور الشخصي.
-              </p>
-              <p>تشمل الخدمات الإلكترونية المتاحة خلال الفترة القادمة:</p>
-              <ul>
-                <li>تجديد جوازات السفر وإصدار بدل فاقد أو تالف.</li>
-                <li>توثيق الشهادات والوكالات والمستندات الرسمية.</li>
-                <li>تسجيل المواليد والزواج والوفيات للمصريين بالخارج.</li>
-                <li>إصدار شهادات الحالة الجنائية والتصديقات القنصلية.</li>
-                <li>متابعة حالة الطلبات عبر المنصة الرقمية.</li>
-              </ul>
-              <p>
-                تدعو القنصلية المواطنين الكرام إلى الاطلاع على الجدول المُحدَّث عبر الموقع الرسمي والتسجيل المسبق للمواعيد لتفادي الازدحام، مع التأكيد على ضرورة إحضار الوثائق المطلوبة كاملة عند الحضور.
-              </p>
+            <div class="fm-account__info">
+              <h2 class="fm-account__name">احمد محمد احمد</h2>
+              <p class="fm-account__id">12345678901234</p>
             </div>
           </div>
-        </article>
+          <span class="fm-account__badge">الحساب الرئيسي</span>
+        </div>
+        <div class="fm-account__divider" aria-hidden="true"></div>
+        <div class="fm-account__actions">
+          <button type="button" class="fm-action fm-action--edit">
+            <iconify-icon icon="mdi:pencil-outline" class="icon icon--sm"></iconify-icon>
+            تعديل
+          </button>
+          <button type="button" class="fm-action fm-action--switch">
+            <iconify-icon icon="mdi:sync" class="icon icon--sm"></iconify-icon>
+            تبديل
+          </button>
+        </div>
+      </section>
 
-        <aside class="news-details__sidebar" aria-labelledby="related-news-title">
-          <div class="news-details__sidebar-header">
-            <iconify-icon icon="solar:document-text-linear" class="icon icon--sm"></iconify-icon>
-            <h2 id="related-news-title">أخبار ذات صلة</h2>
-          </div>
+      <section class="fm-section" aria-label="افراد الاسرة">
+        <div class="fm-section__head">
+          <h2 class="fm-section__title">افراد الاسرة</h2>
+          <a href="add-family-members.html" class="fm-add-btn">
+            اضافة فرد جديد
+            <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+          </a>
+        </div>
 
-          <ul class="news-details__related-list">
-            <li class="news-details__related-item">
-              <a href="news-details.html" class="news-details__related-link">
-                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
-                <div class="news-details__related-content">
-                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
-                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
-                </div>
-              </a>
-            </li>
-            <li class="news-details__related-item">
-              <a href="news-details.html" class="news-details__related-link">
-                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
-                <div class="news-details__related-content">
-                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
-                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
-                </div>
-              </a>
-            </li>
-            <li class="news-details__related-item">
-              <a href="news-details.html" class="news-details__related-link">
-                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
-                <div class="news-details__related-content">
-                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
-                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
-                </div>
-              </a>
-            </li>
-            <li class="news-details__related-item">
-              <a href="news-details.html" class="news-details__related-link">
-                <img src="https://placehold.co/120x80/fff/31343C" alt="" class="news-details__related-thumb" width="88" height="60" />
-                <div class="news-details__related-content">
-                  <h3 class="news-details__related-title">وزير الخارجية يلتقي النائب عضو لجنة الخدمات العسكرية بمجلس النواب الأمريكي</h3>
-                  <time class="news-details__related-date" datetime="2024-09-12">12/9/2024</time>
-                </div>
-              </a>
-            </li>
-          </ul>
+        <div class="fm-grid" data-fm-grid>
+          <article class="fm-card" data-fm-card>
+            <span class="fm-card__avatar">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <h3 class="fm-card__name">محمود محمد احمد</h3>
+            <p class="fm-card__relation">ابن</p>
+            <p class="fm-card__id">12345678901234</p>
+            <div class="fm-card__actions">
+              <button type="button" class="fm-action fm-action--delete" data-fm-delete-open>
+                <iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon>
+                حذف
+              </button>
+              <button type="button" class="fm-action fm-action--edit">
+                <iconify-icon icon="mdi:pencil-outline" class="icon icon--sm"></iconify-icon>
+                تعديل
+              </button>
+              <button type="button" class="fm-action fm-action--switch">
+                <iconify-icon icon="mdi:sync" class="icon icon--sm"></iconify-icon>
+                تبديل
+              </button>
+            </div>
+          </article>
 
-          <div class="news-details__sidebar-footer">
-            <a href="news.html" class="news-details__all-btn">عرض جميع الأخبار</a>
-          </div>
-        </aside>
-      </div>
+          <article class="fm-card" data-fm-card>
+            <span class="fm-card__avatar">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <h3 class="fm-card__name">محمود محمد احمد</h3>
+            <p class="fm-card__relation">ابنة</p>
+            <p class="fm-card__id">12345678901234</p>
+            <div class="fm-card__actions">
+              <button type="button" class="fm-action fm-action--delete" data-fm-delete-open>
+                <iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon>
+                حذف
+              </button>
+              <button type="button" class="fm-action fm-action--edit">
+                <iconify-icon icon="mdi:pencil-outline" class="icon icon--sm"></iconify-icon>
+                تعديل
+              </button>
+              <button type="button" class="fm-action fm-action--switch">
+                <iconify-icon icon="mdi:sync" class="icon icon--sm"></iconify-icon>
+                تبديل
+              </button>
+            </div>
+          </article>
+
+          <article class="fm-card" data-fm-card>
+            <span class="fm-card__avatar">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <h3 class="fm-card__name">محمود محمد احمد</h3>
+            <p class="fm-card__relation">ابن</p>
+            <p class="fm-card__id">12345678901234</p>
+            <div class="fm-card__actions">
+              <button type="button" class="fm-action fm-action--delete" data-fm-delete-open>
+                <iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon>
+                حذف
+              </button>
+              <button type="button" class="fm-action fm-action--edit">
+                <iconify-icon icon="mdi:pencil-outline" class="icon icon--sm"></iconify-icon>
+                تعديل
+              </button>
+              <button type="button" class="fm-action fm-action--switch">
+                <iconify-icon icon="mdi:sync" class="icon icon--sm"></iconify-icon>
+                تبديل
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="fm-empty" data-fm-empty hidden>
+          <img src="assets/images/rafiki.png" alt="" class="fm-empty__image" width="220" height="140" />
+          <h3 class="fm-empty__title">لم يتم اضافة افراد للاسرة بعد</h3>
+          <p class="fm-empty__text">
+            يمكنك اضافة افراد من العائلة (ابن / ابنة) لتسهيل تقديم الطلبات والمعاملات من حساب واحد.
+          </p>
+        </div>
+      </section>
     </div>
   </main>
+
+  <div class="fm-overlay" data-fm-delete-overlay hidden role="dialog" aria-modal="true" aria-labelledby="fm-delete-title">
+    <div class="fm-modal">
+      <button type="button" class="fm-modal__close" data-fm-delete-close aria-label="إغلاق">
+        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+      </button>
+      <span class="fm-modal__icon" aria-hidden="true">
+        <iconify-icon icon="mdi:alert-outline" class="icon"></iconify-icon>
+      </span>
+      <h2 class="fm-modal__title" id="fm-delete-title">حذف فرد من الأسرة</h2>
+      <p class="fm-modal__text">
+        سيتم حذف الحساب نهائيا، كما سيتم إلغاء جميع المعاملات المرتبطة به. و لا يمكن التراجع عن هذا الإجراء.
+      </p>
+      <div class="fm-modal__actions">
+        <button type="button" class="fm-modal__btn fm-modal__btn--delete" data-fm-delete-confirm>حذف</button>
+        <button type="button" class="fm-modal__btn fm-modal__btn--cancel" data-fm-delete-cancel>الغاء</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
@@ -290,8 +315,8 @@
         <h3 class="site-footer__heading">روابط سريعة</h3>
         <ul class="site-footer__list">
           <li><a href="home.html">الرئيسية</a></li>
-          <li><a href="news.html" class="is-active" aria-current="page">الاخبار</a></li>
-          <li><a href="#">اداره افراد الاسره</a></li>
+          <li><a href="news.html">الاخبار</a></li>
+          <li><a href="family-management.html">اداره افراد الاسره</a></li>
           <li><a href="request-tracking.html">تتبع الطلبات</a></li>
         </ul>
       </div>
@@ -300,7 +325,7 @@
         <h3 class="site-footer__heading">الخدمات</h3>
         <ul class="site-footer__list">
           <li><a href="#">الطلبات الخارجية</a></li>
-          <li><a href="#">اضافة ابن / ابنة</a></li>
+          <li><a href="add-family-members.html">اضافة ابن / ابنة</a></li>
           <li><a href="social-media-transactions.html">معاملات سوشيال ميديا</a></li>
           <li><a href="transaction-fees.html">رسوم المعاملات</a></li>
           <li><a href="working-hours.html">ايام العمل والاجازات</a></li>
@@ -327,5 +352,6 @@
   </a>
 
   <script src="assets/js/home.js"></script>
+  <script src="assets/js/family-management.js"></script>
 </body>
 </html>

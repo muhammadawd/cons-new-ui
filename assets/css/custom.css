@@ -429,6 +429,80 @@ body {
   outline-offset: 2px;
 }
 
+@media (max-width: 1023px) {
+  body.min-h-screen.overflow-hidden {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body.min-h-screen.overflow-hidden main,
+  body.min-h-screen.overflow-hidden main > article,
+  body.min-h-screen.overflow-hidden .h-dvh {
+    height: auto;
+    min-height: auto;
+  }
+
+  .landing-panel {
+    padding: 1.5rem 1rem;
+  }
+
+  .landing-panel__heading {
+    font-size: var(--text-lg);
+  }
+
+  .landing-panel__text {
+    margin-bottom: 1.5rem;
+    font-size: var(--text-sm);
+  }
+
+  .page-heading {
+    font-size: var(--text-lg);
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .option-link {
+    padding: 0.875rem 1rem;
+  }
+
+  .branding-panel {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .branding-panel__welcome {
+    font-size: var(--text-lg);
+  }
+
+  .branding-panel__title {
+    font-size: var(--text-xl);
+  }
+
+  .branding-panel__tagline {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .selection-panel {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .breadcrumb-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+
 /* Responsive typography */
 @media (min-width: 640px) {
   .page-heading {

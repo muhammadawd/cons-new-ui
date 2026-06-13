@@ -244,6 +244,31 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .wh-main {
+    padding: 0 1rem 3rem;
+  }
+
+  .wh-panel {
+    padding: 1.25rem 1rem 1.5rem;
+    border-radius: 0.875rem;
+  }
+
+  .wh-date-range {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .wh-days {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .wh-day__name {
+    font-size: 0.65rem;
+  }
+}
+
 @media (min-width: 768px) {
   .wh-days {
     gap: 0.625rem;

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اضافة ابن / ابنة | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/faq.css" />
+  <link rel="stylesheet" href="assets/css/add-family-members.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="afm-page faq-page antialiased">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="home.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="" class="site-logo__img" width="40" height="40" />
+        <span class="site-logo__text">مصري بالخارج</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <div class="site-nav__drawer-head">
+          <button type="button" class="site-nav__back" data-sidebar-close aria-label="إغلاق القائمة">
+            <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+          </button>
+          <a href="#" class="site-nav__drawer-login auth-guest" data-auth-toggle="login">
+            <span class="site-nav__drawer-avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            تسجيل الدخول
+          </a>
+        </div>
+
+        <div class="site-nav__drawer-body">
+          <a href="home.html" class="site-nav__link">الرئيسية</a>
+          <a href="news.html" class="site-nav__link">الأخبار</a>
+          <a href="request-tracking.html" class="site-nav__link">تتبع الطلب</a>
+          <a href="family-management.html" class="site-nav__link site-nav__link--active" aria-current="page">إدارة أفراد الأسرة</a>
+
+          <div class="header-dropdown nav-dropdown">
+            <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+              معلومات القنصلية
+              <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+            </button>
+            <div class="header-dropdown__panel" hidden>
+              <div class="header-dropdown__body">
+                <a href="#" class="header-dropdown__link">الخدمات الإلكترونية</a>
+                <a href="#" class="header-dropdown__link">الوثائق المطلوبة</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-dropdown nav-dropdown">
+            <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+              تواصل معنا
+              <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+            </button>
+            <div class="header-dropdown__panel" hidden>
+              <div class="header-dropdown__body">
+                <a href="faq.html" class="header-dropdown__link">الأسئلة الشائعة</a>
+                <a href="complaints.html" class="header-dropdown__link">الشكاوى والمقترحات</a>
+                <a href="home.html#location-title" class="header-dropdown__link">موقع القنصلية</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="notifications.html" class="icon-btn text-[#111111] w-[24px] h-[24px]" aria-label="الإشعارات">
+          <iconify-icon icon="mdi:bell-notification-outline" class="icon text-[20px]"></iconify-icon>
+        </a>
+
+        <div class="header-dropdown lang-dropdown w-[24px] h-[24px] text-[#111111] flex items-center justify-center">
+          <button
+            type="button"
+            class="lang-dropdown__toggle"
+            id="lang-toggle"
+            aria-label="اللغة"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <iconify-icon icon="iconoir:language" class="icon text-[20px] text-[#111111]"></iconify-icon>
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel lang-dropdown__panel" id="lang-menu" role="listbox" aria-labelledby="lang-toggle" hidden>
+            <div class="header-dropdown__body">
+              <button type="button" class="header-dropdown__link-btn" data-lang="ar" role="option" aria-selected="false">العربية</button>
+              <button type="button" class="header-dropdown__link-btn" data-lang="en" role="option" aria-selected="false">English</button>
+            </div>
+          </div>
+        </div>
+
+        <span class="site-header__divider" aria-hidden="true"></span>
+
+        <a href="#" class="btn-outline auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+
+        <div class="header-dropdown user-dropdown auth-user" hidden>
+          <button type="button" class="user-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-label="حسابي">
+            <span class="user-dropdown__avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <iconify-icon icon="mdi:chevron-down" class="user-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel user-dropdown__panel" hidden>
+            <div class="user-dropdown__info">
+              <strong class="user-dropdown__name">أحمد محمد محمود</strong>
+              <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
+            </div>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link header-dropdown__link--icon">
+                <iconify-icon icon="mdi:account-switch-outline" class="icon"></iconify-icon>
+                تبديل الحساب
+              </a>
+              <button type="button" class="header-dropdown__link header-dropdown__link--danger header-dropdown__link--icon" data-auth-toggle="logout">
+                <iconify-icon icon="mdi:logout" class="icon"></iconify-icon>
+                تسجيل الخروج
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="site-header__menu-toggle" data-sidebar-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <iconify-icon icon="material-symbols:menu" class="icon"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <button type="button" class="site-sidebar-overlay" data-sidebar-overlay hidden aria-label="إغلاق القائمة"></button>
+
+  <section class="faq-hero">
+    <div class="faq-hero__inner">
+      <h1 class="faq-hero__title">اضافة ابن / ابنة</h1>
+      <nav class="faq-breadcrumb" aria-label="مسار التنقل">
+        <a href="home.html">الرئيسية</a>
+        <span class="faq-breadcrumb__sep" aria-hidden="true">
+          <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
+        </span>
+        <span class="faq-breadcrumb__current" aria-current="page">اضافة ابن / ابنة</span>
+      </nav>
+    </div>
+  </section>
+
+  <main class="afm-main">
+    <div class="afm-main__inner">
+      <div class="afm-card">
+        <div class="afm-progress" aria-hidden="true">
+          <div class="afm-progress__track">
+            <div class="afm-progress__bar" data-afm-progress style="width: 50%"></div>
+          </div>
+        </div>
+
+        <!-- Step 1: Personal info -->
+        <div class="afm-step" data-afm-step="1">
+          <div class="afm-field">
+            <span class="afm-field__label">العلاقة</span>
+            <div class="afm-relation" role="group" aria-label="العلاقة">
+              <button type="button" class="afm-relation__option afm-relation__option--active" data-afm-relation="son" aria-pressed="true">
+                <span class="afm-relation__mark">
+                  <iconify-icon icon="icon-park-solid:check-one" class="icon icon--sm"></iconify-icon>
+                </span>
+                ابن
+              </button>
+              <button type="button" class="afm-relation__option" data-afm-relation="daughter" aria-pressed="false">
+                <span class="afm-relation__mark" aria-hidden="true"></span>
+                ابنة
+              </button>
+            </div>
+          </div>
+
+          <div class="afm-grid">
+            <div class="afm-field">
+              <label for="afm-first-name" class="afm-field__label">الاسم الأول</label>
+              <div class="afm-control">
+                <input type="text" id="afm-first-name" class="afm-input" placeholder="ادخل الاسم الأول" />
+                <iconify-icon icon="solar:user-linear" class="icon icon--sm afm-input__icon" aria-hidden="true"></iconify-icon>
+              </div>
+            </div>
+            <div class="afm-field">
+              <label for="afm-second-name" class="afm-field__label">الاسم الثاني</label>
+              <div class="afm-control">
+                <input type="text" id="afm-second-name" class="afm-input" placeholder="ادخل الاسم الثاني" />
+                <iconify-icon icon="solar:user-linear" class="icon icon--sm afm-input__icon" aria-hidden="true"></iconify-icon>
+              </div>
+            </div>
+            <div class="afm-field">
+              <label for="afm-third-name" class="afm-field__label">الاسم الثالث</label>
+              <div class="afm-control">
+                <input type="text" id="afm-third-name" class="afm-input" placeholder="ادخل الاسم الثالث" />
+                <iconify-icon icon="solar:user-linear" class="icon icon--sm afm-input__icon" aria-hidden="true"></iconify-icon>
+              </div>
+            </div>
+            <div class="afm-field">
+              <label for="afm-last-name" class="afm-field__label">الاسم الأخير</label>
+              <div class="afm-control">
+                <input type="text" id="afm-last-name" class="afm-input" placeholder="ادخل الاسم الأخير" />
+                <iconify-icon icon="solar:user-linear" class="icon icon--sm afm-input__icon" aria-hidden="true"></iconify-icon>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="afm-btn afm-btn--primary afm-btn--block" data-afm-step-next>متابعة</button>
+        </div>
+
+        <!-- Step 2: Documents -->
+        <div class="afm-step" data-afm-step="2" hidden>
+          <div class="afm-field">
+            <span class="afm-field__label">اختر نوع المستند</span>
+            <div class="afm-control">
+              <button type="button" class="afm-doc-trigger" data-afm-doc-trigger aria-haspopup="dialog">
+                <iconify-icon icon="mdi:file-document-outline" class="icon icon--sm afm-doc-trigger__icon" aria-hidden="true"></iconify-icon>
+                <span class="afm-doc-trigger__placeholder" data-afm-doc-label>نوع المستند</span>
+                <iconify-icon icon="mdi:chevron-down" class="icon icon--sm afm-doc-trigger__chevron" aria-hidden="true"></iconify-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="afm-uploads" data-afm-uploads hidden>
+            <!-- Passport -->
+            <div class="afm-upload-panel" data-afm-upload-panel="passport" hidden>
+              <div class="afm-field">
+                <span class="afm-field__label">صورة جواز السفر</span>
+                <div class="afm-upload" data-afm-upload>
+                  <input type="file" class="afm-upload__input" data-afm-upload-input accept="image/*" />
+                  <div class="afm-upload__zone" data-afm-upload-zone>
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                      <p class="afm-upload__hint">أقصى حجم للصورة 1MB</p>
+                    </div>
+                    <div class="afm-upload__loading">
+                      <span class="afm-upload__spinner" aria-hidden="true"></span>
+                      <div class="afm-upload__progress"><div class="afm-upload__progress-bar" data-afm-upload-progress-bar></div></div>
+                      <p class="afm-upload__text">جاري الرفع...</p>
+                    </div>
+                    <div class="afm-upload__preview">
+                      <img src="" alt="" class="afm-upload__thumb" data-afm-upload-thumb hidden />
+                      <p class="afm-upload__filename" data-afm-upload-filename></p>
+                      <button type="button" class="afm-upload__remove" data-afm-upload-remove>
+                        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                        حذف
+                      </button>
+                    </div>
+                  </div>
+                  <p class="afm-upload__error-msg" data-afm-upload-error></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Birth certificate -->
+            <div class="afm-upload-panel" data-afm-upload-panel="birth" hidden>
+              <div class="afm-field">
+                <span class="afm-field__label">صورة شهادة الميلاد</span>
+                <div class="afm-upload" data-afm-upload>
+                  <input type="file" class="afm-upload__input" data-afm-upload-input accept="image/*" />
+                  <div class="afm-upload__zone" data-afm-upload-zone>
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                      <p class="afm-upload__hint">أقصى حجم للصورة 1MB</p>
+                    </div>
+                    <div class="afm-upload__loading">
+                      <span class="afm-upload__spinner" aria-hidden="true"></span>
+                      <div class="afm-upload__progress"><div class="afm-upload__progress-bar" data-afm-upload-progress-bar></div></div>
+                      <p class="afm-upload__text">جاري الرفع...</p>
+                    </div>
+                    <div class="afm-upload__preview">
+                      <img src="" alt="" class="afm-upload__thumb" data-afm-upload-thumb hidden />
+                      <p class="afm-upload__filename" data-afm-upload-filename></p>
+                      <button type="button" class="afm-upload__remove" data-afm-upload-remove>
+                        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                        حذف
+                      </button>
+                    </div>
+                  </div>
+                  <p class="afm-upload__error-msg" data-afm-upload-error></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- National ID -->
+            <div class="afm-upload-panel afm-upload-panel--dual" data-afm-upload-panel="national-id" hidden>
+              <div class="afm-field">
+                <span class="afm-field__label">صورة بطاقة الرقم القومي (وجه البطاقة)</span>
+                <div class="afm-upload" data-afm-upload>
+                  <input type="file" class="afm-upload__input" data-afm-upload-input accept="image/*" />
+                  <div class="afm-upload__zone" data-afm-upload-zone>
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                      <p class="afm-upload__hint">أقصى حجم للصورة 1MB</p>
+                    </div>
+                    <div class="afm-upload__loading">
+                      <span class="afm-upload__spinner" aria-hidden="true"></span>
+                      <div class="afm-upload__progress"><div class="afm-upload__progress-bar" data-afm-upload-progress-bar></div></div>
+                      <p class="afm-upload__text">جاري الرفع...</p>
+                    </div>
+                    <div class="afm-upload__preview">
+                      <img src="" alt="" class="afm-upload__thumb" data-afm-upload-thumb hidden />
+                      <p class="afm-upload__filename" data-afm-upload-filename></p>
+                      <button type="button" class="afm-upload__remove" data-afm-upload-remove>
+                        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                        حذف
+                      </button>
+                    </div>
+                  </div>
+                  <p class="afm-upload__error-msg" data-afm-upload-error></p>
+                </div>
+              </div>
+              <div class="afm-field">
+                <span class="afm-field__label">صورة بطاقة الرقم القومي (ظهر البطاقة)</span>
+                <div class="afm-upload" data-afm-upload>
+                  <input type="file" class="afm-upload__input" data-afm-upload-input accept="image/*" />
+                  <div class="afm-upload__zone" data-afm-upload-zone>
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                      <p class="afm-upload__hint">أقصى حجم للصورة 1MB</p>
+                    </div>
+                    <div class="afm-upload__loading">
+                      <span class="afm-upload__spinner" aria-hidden="true"></span>
+                      <div class="afm-upload__progress"><div class="afm-upload__progress-bar" data-afm-upload-progress-bar></div></div>
+                      <p class="afm-upload__text">جاري الرفع...</p>
+                    </div>
+                    <div class="afm-upload__preview">
+                      <img src="" alt="" class="afm-upload__thumb" data-afm-upload-thumb hidden />
+                      <p class="afm-upload__filename" data-afm-upload-filename></p>
+                      <button type="button" class="afm-upload__remove" data-afm-upload-remove>
+                        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                        حذف
+                      </button>
+                    </div>
+                  </div>
+                  <p class="afm-upload__error-msg" data-afm-upload-error></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Other -->
+            <div class="afm-upload-panel" data-afm-upload-panel="other" hidden>
+              <div class="afm-field">
+                <span class="afm-field__label">صورة المستند</span>
+                <div class="afm-upload" data-afm-upload>
+                  <input type="file" class="afm-upload__input" data-afm-upload-input accept="image/*" />
+                  <div class="afm-upload__zone" data-afm-upload-zone>
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                      <p class="afm-upload__hint">أقصى حجم للصورة 1MB</p>
+                    </div>
+                    <div class="afm-upload__loading">
+                      <span class="afm-upload__spinner" aria-hidden="true"></span>
+                      <div class="afm-upload__progress"><div class="afm-upload__progress-bar" data-afm-upload-progress-bar></div></div>
+                      <p class="afm-upload__text">جاري الرفع...</p>
+                    </div>
+                    <div class="afm-upload__preview">
+                      <img src="" alt="" class="afm-upload__thumb" data-afm-upload-thumb hidden />
+                      <p class="afm-upload__filename" data-afm-upload-filename></p>
+                      <button type="button" class="afm-upload__remove" data-afm-upload-remove>
+                        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                        حذف
+                      </button>
+                    </div>
+                  </div>
+                  <p class="afm-upload__error-msg" data-afm-upload-error></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="afm-actions afm-actions--dual">
+            <button type="button" class="afm-btn afm-btn--outline" data-afm-step-back>السابق</button>
+            <button type="submit" class="afm-btn afm-btn--primary">أضافة فرد جديد</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Static showcase: all document types & upload states -->
+      <section class="afm-showcase" aria-label="عرض حالات الواجهة">
+        <h2 class="afm-showcase__title">حالات أنواع المستندات والرفع</h2>
+        <div class="afm-showcase__grid">
+          <div class="afm-showcase__case">
+            <h3 class="afm-showcase__case-title">جواز سفر</h3>
+            <div class="afm-upload">
+              <div class="afm-upload__zone">
+                <div class="afm-upload__empty">
+                  <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                  <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                  <p class="afm-upload__hint">أقصى حجم للصورة 1MB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="afm-showcase__case">
+            <h3 class="afm-showcase__case-title">شهادة ميلاد</h3>
+            <div class="afm-upload">
+              <div class="afm-upload__zone">
+                <div class="afm-upload__empty">
+                  <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                  <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                  <p class="afm-upload__hint">أقصى حجم للصورة 1MB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="afm-showcase__case">
+            <h3 class="afm-showcase__case-title">بطاقة الرقم القومي</h3>
+            <div class="afm-upload-panel afm-upload-panel--dual">
+              <div class="afm-field" style="margin-bottom: 0">
+                <span class="afm-field__label">وجه البطاقة</span>
+                <div class="afm-upload">
+                  <div class="afm-upload__zone">
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="afm-field" style="margin-bottom: 0">
+                <span class="afm-field__label">ظهر البطاقة</span>
+                <div class="afm-upload">
+                  <div class="afm-upload__zone">
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="afm-showcase__case">
+            <h3 class="afm-showcase__case-title">حالات الرفع</h3>
+            <div class="afm-showcase__states afm-showcase__states--row">
+              <div>
+                <p class="afm-showcase__state-label">فارغ</p>
+                <div class="afm-upload">
+                  <div class="afm-upload__zone">
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="afm-showcase__state-label">تحويم</p>
+                <div class="afm-upload afm-upload--drag">
+                  <div class="afm-upload__zone">
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="afm-showcase__state-label">جاري الرفع</p>
+                <div class="afm-upload afm-upload--loading">
+                  <div class="afm-upload__zone">
+                    <div class="afm-upload__loading">
+                      <span class="afm-upload__spinner" aria-hidden="true"></span>
+                      <div class="afm-upload__progress"><div class="afm-upload__progress-bar" style="width: 60%"></div></div>
+                      <p class="afm-upload__text">جاري الرفع...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="afm-showcase__state-label">تم الرفع</p>
+                <div class="afm-upload afm-upload--preview">
+                  <div class="afm-upload__zone">
+                    <div class="afm-upload__preview">
+                      <img src="https://placehold.co/200x120/efefef/31343C" alt="" class="afm-upload__thumb" />
+                      <p class="afm-upload__filename">document.jpg</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="afm-showcase__state-label">خطأ</p>
+                <div class="afm-upload afm-upload--error">
+                  <div class="afm-upload__zone">
+                    <div class="afm-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="afm-upload__icon"></iconify-icon>
+                      <p class="afm-upload__text">اضغط لرفع الصورة</p>
+                    </div>
+                  </div>
+                  <p class="afm-upload__error-msg">أقصى حجم للصورة 1MB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Document type modal -->
+  <div class="afm-overlay" data-afm-doc-overlay hidden role="dialog" aria-modal="true" aria-labelledby="afm-doc-modal-title">
+    <div class="afm-modal">
+      <ul class="afm-modal__list" id="afm-doc-modal-title">
+        <li>
+          <button type="button" class="afm-modal__option afm-modal__option--selected" data-afm-doc-option="passport">
+            جواز سفر
+            <span class="afm-modal__mark"><iconify-icon icon="icon-park-solid:check-one" class="icon icon--sm"></iconify-icon></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="afm-modal__option" data-afm-doc-option="birth">
+            شهادة ميلاد
+            <span class="afm-modal__mark" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="afm-modal__option" data-afm-doc-option="national-id">
+            بطاقة رقم قومي
+            <span class="afm-modal__mark" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="afm-modal__option" data-afm-doc-option="other">
+            أخرى
+            <span class="afm-modal__mark" aria-hidden="true"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__column site-footer__column--brand">
+        <a href="home.html" class="site-footer__logo">
+          <img src="assets/images/logo.png" alt="" class="site-footer__logo-img" width="48" height="48" />
+          <span class="site-footer__logo-text">مصري بالخارج</span>
+        </a>
+        <p class="site-footer__about">
+          منصة رقمية متكاملة تقدم خدمات قنصلية للمصريين في الخارج بسهولة وأمان، أينما كنت حول العالم.
+        </p>
+        <div class="site-footer__social">
+          <a href="#" class="site-footer__social-link" aria-label="إكس">
+            <iconify-icon icon="mdi:twitter" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="إنستغرام">
+            <iconify-icon icon="mdi:instagram" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="فيسبوك">
+            <iconify-icon icon="mdi:facebook" class="icon"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">روابط سريعة</h3>
+        <ul class="site-footer__list">
+          <li><a href="home.html">الرئيسية</a></li>
+          <li><a href="news.html">الاخبار</a></li>
+          <li><a href="family-management.html">اداره افراد الاسره</a></li>
+          <li><a href="request-tracking.html">تتبع الطلبات</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الخدمات</h3>
+        <ul class="site-footer__list">
+          <li><a href="#">الطلبات الخارجية</a></li>
+          <li><a href="add-family-members.html" class="is-active" aria-current="page">اضافة ابن / ابنة</a></li>
+          <li><a href="social-media-transactions.html">معاملات سوشيال ميديا</a></li>
+          <li><a href="transaction-fees.html">رسوم المعاملات</a></li>
+          <li><a href="working-hours.html">ايام العمل والاجازات</a></li>
+          <li><a href="#">الاخبار المفضلة</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الدعم</h3>
+        <ul class="site-footer__list">
+          <li><a href="faq.html">الاسئلة الشائعة</a></li>
+          <li><a href="complaints.html">الشكاوي و المقترحات</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© 2026 مصري بالخارج. جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <a href="#" class="chat-fab" aria-label="المساعد الذكي">
+    <iconify-icon icon="mdi:robot-outline" class="icon icon--lg"></iconify-icon>
+  </a>
+
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/add-family-members.js"></script>
+</body>
+</html>
