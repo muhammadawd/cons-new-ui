@@ -140,3 +140,11 @@
   });
 
 })();
+
+(function () {
+  if (window.__siteAnimationsRequested) return;
+  window.__siteAnimationsRequested = true;
+  var script = document.createElement("script");
+  script.src = "assets/js/site-animations.js";
+  document.body.appendChild(script);
+})();

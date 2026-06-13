@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearchFilter();
 });
 
+(function () {
+  if (window.__siteAnimationsRequested) return;
+  window.__siteAnimationsRequested = true;
+  var script = document.createElement("script");
+  script.src = "assets/js/site-animations.js";
+  document.body.appendChild(script);
+})();
+
 function initSearchFilter() {
   const searchInput = document.querySelector('[data-search]');
   const options = document.querySelectorAll('[data-option]');
