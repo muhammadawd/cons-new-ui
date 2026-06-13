@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الطلبات الخارجية | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/faq.css" />
+  <link rel="stylesheet" href="assets/css/external-request.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="er-page faq-page antialiased">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="home.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="" class="site-logo__img" width="40" height="40" />
+        <span class="site-logo__text">مصري بالخارج</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <div class="site-nav__drawer-head">
+          <button type="button" class="site-nav__back" data-sidebar-close aria-label="إغلاق القائمة">
+            <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
+          </button>
+          <a href="#" class="site-nav__drawer-login auth-guest" data-auth-toggle="login">
+            <span class="site-nav__drawer-avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            تسجيل الدخول
+          </a>
+        </div>
+
+        <div class="site-nav__drawer-body">
+          <a href="home.html" class="site-nav__link">الرئيسية</a>
+          <a href="news.html" class="site-nav__link">الأخبار</a>
+          <a href="request-tracking.html" class="site-nav__link">تتبع الطلب</a>
+          <a href="family-management.html" class="site-nav__link">إدارة أفراد الأسرة</a>
+
+          <div class="header-dropdown nav-dropdown">
+            <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+              معلومات القنصلية
+              <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+            </button>
+            <div class="header-dropdown__panel" hidden>
+              <div class="header-dropdown__body">
+                <a href="#" class="header-dropdown__link">الخدمات الإلكترونية</a>
+                <a href="#" class="header-dropdown__link">الوثائق المطلوبة</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-dropdown nav-dropdown">
+            <button type="button" class="site-nav__trigger" aria-expanded="false" aria-haspopup="true">
+              تواصل معنا
+              <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+            </button>
+            <div class="header-dropdown__panel" hidden>
+              <div class="header-dropdown__body">
+                <a href="faq.html" class="header-dropdown__link">الأسئلة الشائعة</a>
+                <a href="complaints.html" class="header-dropdown__link">الشكاوى والمقترحات</a>
+                <a href="home.html#location-title" class="header-dropdown__link">موقع القنصلية</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="notifications.html" class="icon-btn text-[#111111] w-[24px] h-[24px]" aria-label="الإشعارات">
+          <iconify-icon icon="mdi:bell-notification-outline" class="icon text-[20px]"></iconify-icon>
+        </a>
+
+        <div class="header-dropdown lang-dropdown w-[24px] h-[24px] text-[#111111] flex items-center justify-center">
+          <button
+            type="button"
+            class="lang-dropdown__toggle"
+            id="lang-toggle"
+            aria-label="اللغة"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <iconify-icon icon="iconoir:language" class="icon text-[20px] text-[#111111]"></iconify-icon>
+            <iconify-icon icon="mdi:chevron-down" class="site-nav__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel lang-dropdown__panel" id="lang-menu" role="listbox" aria-labelledby="lang-toggle" hidden>
+            <div class="header-dropdown__body">
+              <button type="button" class="header-dropdown__link-btn" data-lang="ar" role="option" aria-selected="false">العربية</button>
+              <button type="button" class="header-dropdown__link-btn" data-lang="en" role="option" aria-selected="false">English</button>
+            </div>
+          </div>
+        </div>
+
+        <span class="site-header__divider" aria-hidden="true"></span>
+
+        <a href="#" class="btn-outline auth-guest" data-auth-toggle="login">تسجيل الدخول</a>
+
+        <div class="header-dropdown user-dropdown auth-user" hidden>
+          <button type="button" class="user-dropdown__toggle" aria-expanded="false" aria-haspopup="true" aria-label="حسابي">
+            <span class="user-dropdown__avatar" aria-hidden="true">
+              <iconify-icon icon="solar:user-bold" class="icon"></iconify-icon>
+            </span>
+            <iconify-icon icon="mdi:chevron-down" class="user-dropdown__chevron"></iconify-icon>
+          </button>
+          <div class="header-dropdown__panel user-dropdown__panel" hidden>
+            <div class="user-dropdown__info">
+              <strong class="user-dropdown__name">أحمد محمد محمود</strong>
+              <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
+            </div>
+            <div class="header-dropdown__body">
+              <a href="#" class="header-dropdown__link header-dropdown__link--icon">
+                <iconify-icon icon="mdi:account-switch-outline" class="icon"></iconify-icon>
+                تبديل الحساب
+              </a>
+              <button type="button" class="header-dropdown__link header-dropdown__link--danger header-dropdown__link--icon" data-auth-toggle="logout">
+                <iconify-icon icon="mdi:logout" class="icon"></iconify-icon>
+                تسجيل الخروج
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="site-header__menu-toggle" data-sidebar-toggle aria-expanded="false" aria-controls="site-nav" aria-label="فتح القائمة">
+          <iconify-icon icon="material-symbols:menu" class="icon"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <button type="button" class="site-sidebar-overlay" data-sidebar-overlay hidden aria-label="إغلاق القائمة"></button>
+
+  <section class="faq-hero">
+    <div class="faq-hero__inner">
+      <h1 class="faq-hero__title">الطلبات الخارجية</h1>
+      <nav class="faq-breadcrumb" aria-label="مسار التنقل">
+        <a href="home.html">الرئيسية</a>
+        <span class="faq-breadcrumb__sep" aria-hidden="true">
+          <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
+        </span>
+        <span class="faq-breadcrumb__current" aria-current="page">الطلبات الخارجية</span>
+      </nav>
+    </div>
+  </section>
+
+  <main class="er-main">
+    <div class="er-main__inner">
+      <div class="er-card">
+        <div class="er-progress" aria-hidden="true">
+          <div class="er-progress__track">
+            <div class="er-progress__bar" data-er-progress style="width: 25%"></div>
+          </div>
+        </div>
+
+        <!-- Step 1: Select service type -->
+        <div class="er-step" data-er-step="1">
+          <div class="er-search search-box" dir="rtl">
+            <label for="er-search-1" class="sr-only">ابحث</label>
+            <input type="search" id="er-search-1" class="search-field er-search__input" placeholder="ابحث" data-er-search autocomplete="off" />
+            <span class="search-box__label" aria-hidden="true">
+              <iconify-icon icon="iconamoon:search-light" class="icon"></iconify-icon>
+              <span>ابحث</span>
+            </span>
+          </div>
+
+          <h2 class="er-section-title">حدد نوع الخدمة</h2>
+
+          <div class="er-options" data-er-options role="group" aria-label="نوع الخدمة">
+            <button type="button" class="er-option er-option--active" data-er-option aria-pressed="true">
+              <span class="er-option__mark">
+                <iconify-icon icon="icon-park-solid:check-one" class="icon icon--sm"></iconify-icon>
+              </span>
+              الاختيار الاول
+            </button>
+            <button type="button" class="er-option" data-er-option aria-pressed="false">
+              <span class="er-option__mark" aria-hidden="true"></span>
+              الاختيار الاول
+            </button>
+            <button type="button" class="er-option" data-er-option aria-pressed="false">
+              <span class="er-option__mark" aria-hidden="true"></span>
+              الاختيار الاول
+            </button>
+            <button type="button" class="er-option" data-er-option aria-pressed="false">
+              <span class="er-option__mark" aria-hidden="true"></span>
+              الاختيار الاول
+            </button>
+          </div>
+
+          <div class="er-actions er-actions--dual">
+            <button type="button" class="er-btn er-btn--outline" data-er-back="home">السابق</button>
+            <button type="button" class="er-btn er-btn--primary" data-er-next="2">متابعة</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Select transaction type -->
+        <div class="er-step" data-er-step="2" hidden>
+          <div class="er-search search-box" dir="rtl">
+            <label for="er-search-2" class="sr-only">ابحث</label>
+            <input type="search" id="er-search-2" class="search-field er-search__input" placeholder="ابحث" data-er-search autocomplete="off" />
+            <span class="search-box__label" aria-hidden="true">
+              <iconify-icon icon="iconamoon:search-light" class="icon"></iconify-icon>
+              <span>ابحث</span>
+            </span>
+          </div>
+
+          <h2 class="er-section-title">حدد نوع المعاملة</h2>
+
+          <div class="er-options" data-er-options role="group" aria-label="نوع المعاملة">
+            <button type="button" class="er-option er-option--active" data-er-option aria-pressed="true">
+              <span class="er-option__mark">
+                <iconify-icon icon="icon-park-solid:check-one" class="icon icon--sm"></iconify-icon>
+              </span>
+              الاختيار الاول
+            </button>
+            <button type="button" class="er-option" data-er-option aria-pressed="false">
+              <span class="er-option__mark" aria-hidden="true"></span>
+              الاختيار الاول
+            </button>
+            <button type="button" class="er-option" data-er-option aria-pressed="false">
+              <span class="er-option__mark" aria-hidden="true"></span>
+              الاختيار الاول
+            </button>
+            <button type="button" class="er-option" data-er-option aria-pressed="false">
+              <span class="er-option__mark" aria-hidden="true"></span>
+              الاختيار الاول
+            </button>
+          </div>
+
+          <div class="er-actions">
+            <button type="button" class="er-btn er-btn--primary er-btn--block" data-er-next="3">متابعة</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Applicant details -->
+        <div class="er-step" data-er-step="3" hidden>
+          <div class="er-field">
+            <label for="er-reason" class="er-field__label">سبب تقديم الطلب</label>
+            <div class="er-control">
+              <select id="er-reason" class="er-select">
+                <option value="lost" selected>بدل فاقد</option>
+                <option value="renewal">تجديد</option>
+                <option value="new">إصدار جديد</option>
+              </select>
+              <iconify-icon icon="mdi:format-list-bulleted" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+              <iconify-icon icon="mdi:chevron-down" class="icon icon--sm er-input__chevron" aria-hidden="true"></iconify-icon>
+            </div>
+          </div>
+
+          <div class="er-field">
+            <label for="er-applicant-name" class="er-field__label">اسم من يرغب في تقديم الطلب</label>
+            <div class="er-control">
+              <input type="text" id="er-applicant-name" class="er-input" value="محمد احمد محمد" />
+              <iconify-icon icon="solar:user-linear" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+            </div>
+          </div>
+
+          <div class="er-field">
+            <label for="er-national-id" class="er-field__label">الرقم القومي</label>
+            <div class="er-control">
+              <input type="text" id="er-national-id" class="er-input" value="30306785549843" inputmode="numeric" />
+              <iconify-icon icon="mdi:card-account-details-outline" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+            </div>
+          </div>
+
+          <div class="er-field">
+            <label for="er-birth-date" class="er-field__label">تاريخ الميلاد</label>
+            <div class="er-control">
+              <input type="text" id="er-birth-date" class="er-input" value="14/01/2003" />
+              <iconify-icon icon="mdi:calendar-outline" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+            </div>
+          </div>
+
+          <div class="er-field">
+            <label for="er-phone" class="er-field__label">رقم الهاتف</label>
+            <div class="er-phone">
+              <span class="er-phone__code">
+                <span class="er-phone__flag" aria-hidden="true">🇸🇦</span>
+                +966
+              </span>
+              <input type="tel" id="er-phone" class="er-phone__input" value="1234567890" />
+            </div>
+          </div>
+
+          <div class="er-actions er-actions--dual">
+            <button type="button" class="er-btn er-btn--outline" data-er-back="2">السابق</button>
+            <button type="button" class="er-btn er-btn--primary" data-er-next="4">متابعة</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Documents & submit -->
+        <div class="er-step" data-er-step="4" hidden>
+          <div class="er-uploads">
+            <div class="er-field">
+              <span class="er-field__label">صورة جواز السفر</span>
+              <div class="er-upload" data-er-upload>
+                <input type="file" class="er-upload__input" data-er-upload-input accept="image/*" />
+                <div class="er-upload__zone" data-er-upload-zone>
+                  <div class="er-upload__empty">
+                    <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                    <p class="er-upload__text">اضغط لرفع الصورة</p>
+                    <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                  </div>
+                  <div class="er-upload__loading">
+                    <span class="er-upload__spinner" aria-hidden="true"></span>
+                    <div class="er-upload__progress"><div class="er-upload__progress-bar" data-er-upload-progress-bar></div></div>
+                    <p class="er-upload__text">جاري الرفع...</p>
+                  </div>
+                  <div class="er-upload__preview">
+                    <img src="" alt="" class="er-upload__thumb" data-er-upload-thumb hidden />
+                    <p class="er-upload__filename" data-er-upload-filename></p>
+                    <button type="button" class="er-upload__remove" data-er-upload-remove>
+                      <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                      حذف
+                    </button>
+                  </div>
+                </div>
+                <p class="er-upload__error-msg" data-er-upload-error></p>
+              </div>
+            </div>
+
+            <div class="er-field">
+              <span class="er-field__label">صورة جواز السفر</span>
+              <div class="er-upload" data-er-upload>
+                <input type="file" class="er-upload__input" data-er-upload-input accept="image/*" />
+                <div class="er-upload__zone" data-er-upload-zone>
+                  <div class="er-upload__empty">
+                    <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                    <p class="er-upload__text">اضغط لرفع الصورة</p>
+                    <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                  </div>
+                  <div class="er-upload__loading">
+                    <span class="er-upload__spinner" aria-hidden="true"></span>
+                    <div class="er-upload__progress"><div class="er-upload__progress-bar" data-er-upload-progress-bar></div></div>
+                    <p class="er-upload__text">جاري الرفع...</p>
+                  </div>
+                  <div class="er-upload__preview">
+                    <img src="" alt="" class="er-upload__thumb" data-er-upload-thumb hidden />
+                    <p class="er-upload__filename" data-er-upload-filename></p>
+                    <button type="button" class="er-upload__remove" data-er-upload-remove>
+                      <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                      حذف
+                    </button>
+                  </div>
+                </div>
+                <p class="er-upload__error-msg" data-er-upload-error></p>
+              </div>
+            </div>
+
+            <div class="er-field">
+              <span class="er-field__label">صورة جواز السفر</span>
+              <div class="er-upload" data-er-upload>
+                <input type="file" class="er-upload__input" data-er-upload-input accept="image/*" />
+                <div class="er-upload__zone" data-er-upload-zone>
+                  <div class="er-upload__empty">
+                    <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                    <p class="er-upload__text">اضغط لرفع الصورة</p>
+                    <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                  </div>
+                  <div class="er-upload__loading">
+                    <span class="er-upload__spinner" aria-hidden="true"></span>
+                    <div class="er-upload__progress"><div class="er-upload__progress-bar" data-er-upload-progress-bar></div></div>
+                    <p class="er-upload__text">جاري الرفع...</p>
+                  </div>
+                  <div class="er-upload__preview">
+                    <img src="" alt="" class="er-upload__thumb" data-er-upload-thumb hidden />
+                    <p class="er-upload__filename" data-er-upload-filename></p>
+                    <button type="button" class="er-upload__remove" data-er-upload-remove>
+                      <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                      حذف
+                    </button>
+                  </div>
+                </div>
+                <p class="er-upload__error-msg" data-er-upload-error></p>
+              </div>
+            </div>
+
+            <div class="er-field">
+              <span class="er-field__label">صورة جواز السفر</span>
+              <div class="er-upload" data-er-upload>
+                <input type="file" class="er-upload__input" data-er-upload-input accept="image/*" />
+                <div class="er-upload__zone" data-er-upload-zone>
+                  <div class="er-upload__empty">
+                    <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                    <p class="er-upload__text">اضغط لرفع الصورة</p>
+                    <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                  </div>
+                  <div class="er-upload__loading">
+                    <span class="er-upload__spinner" aria-hidden="true"></span>
+                    <div class="er-upload__progress"><div class="er-upload__progress-bar" data-er-upload-progress-bar></div></div>
+                    <p class="er-upload__text">جاري الرفع...</p>
+                  </div>
+                  <div class="er-upload__preview">
+                    <img src="" alt="" class="er-upload__thumb" data-er-upload-thumb hidden />
+                    <p class="er-upload__filename" data-er-upload-filename></p>
+                    <button type="button" class="er-upload__remove" data-er-upload-remove>
+                      <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+                      حذف
+                    </button>
+                  </div>
+                </div>
+                <p class="er-upload__error-msg" data-er-upload-error></p>
+              </div>
+            </div>
+          </div>
+
+          <label class="er-declaration">
+            <input type="checkbox" class="er-declaration__input" data-er-declaration />
+            <span class="er-declaration__text">أقر بأن كافة البيانات المدخلة في هذا النموذج صحيحة و أتحمل مسؤولية ما يترتب على ذلك</span>
+          </label>
+
+          <div class="er-actions er-actions--dual">
+            <button type="button" class="er-btn er-btn--outline" data-er-back="3">السابق</button>
+            <button type="button" class="er-btn er-btn--primary" data-er-submit>ارسال الطلب</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Static showcase: all steps & upload states -->
+      <section class="er-showcase" aria-label="عرض خطوات الطلب وحالات الرفع">
+        <h2 class="er-showcase__title">عرض جميع الخطوات والحالات</h2>
+        <p class="er-showcase__subtitle">معاينة ثابتة لكل خطوة وحالات رفع المستندات</p>
+
+        <div class="er-showcase__steps">
+          <!-- Step 1 preview -->
+          <article class="er-showcase__step">
+            <div class="er-showcase__step-head">الخطوة ١ — حدد نوع الخدمة</div>
+            <div class="er-showcase__step-body">
+              <div class="er-search search-box" dir="rtl">
+                <input type="search" class="search-field er-search__input" placeholder="ابحث" readonly tabindex="-1" />
+                <span class="search-box__label" aria-hidden="true">
+                  <iconify-icon icon="iconamoon:search-light" class="icon"></iconify-icon>
+                  <span>ابحث</span>
+                </span>
+              </div>
+              <h3 class="er-section-title">حدد نوع الخدمة</h3>
+              <div class="er-options">
+                <button type="button" class="er-option er-option--active" tabindex="-1">
+                  <span class="er-option__mark"><iconify-icon icon="icon-park-solid:check-one" class="icon icon--sm"></iconify-icon></span>
+                  الاختيار الاول
+                </button>
+                <button type="button" class="er-option" tabindex="-1">
+                  <span class="er-option__mark"></span>
+                  الاختيار الاول
+                </button>
+                <button type="button" class="er-option" tabindex="-1">
+                  <span class="er-option__mark"></span>
+                  الاختيار الاول
+                </button>
+                <button type="button" class="er-option" tabindex="-1">
+                  <span class="er-option__mark"></span>
+                  الاختيار الاول
+                </button>
+              </div>
+              <div class="er-actions er-actions--dual">
+                <button type="button" class="er-btn er-btn--outline" tabindex="-1">السابق</button>
+                <button type="button" class="er-btn er-btn--primary" tabindex="-1">متابعة</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2 preview -->
+          <article class="er-showcase__step">
+            <div class="er-showcase__step-head">الخطوة ٢ — حدد نوع المعاملة</div>
+            <div class="er-showcase__step-body">
+              <div class="er-search search-box" dir="rtl">
+                <input type="search" class="search-field er-search__input" placeholder="ابحث" readonly tabindex="-1" />
+                <span class="search-box__label" aria-hidden="true">
+                  <iconify-icon icon="iconamoon:search-light" class="icon"></iconify-icon>
+                  <span>ابحث</span>
+                </span>
+              </div>
+              <h3 class="er-section-title">حدد نوع المعاملة</h3>
+              <div class="er-options">
+                <button type="button" class="er-option er-option--active" tabindex="-1">
+                  <span class="er-option__mark"><iconify-icon icon="icon-park-solid:check-one" class="icon icon--sm"></iconify-icon></span>
+                  الاختيار الاول
+                </button>
+                <button type="button" class="er-option" tabindex="-1">
+                  <span class="er-option__mark"></span>
+                  الاختيار الاول
+                </button>
+                <button type="button" class="er-option" tabindex="-1">
+                  <span class="er-option__mark"></span>
+                  الاختيار الاول
+                </button>
+                <button type="button" class="er-option" tabindex="-1">
+                  <span class="er-option__mark"></span>
+                  الاختيار الاول
+                </button>
+              </div>
+              <div class="er-actions">
+                <button type="button" class="er-btn er-btn--primary er-btn--block" tabindex="-1">متابعة</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3 preview -->
+          <article class="er-showcase__step">
+            <div class="er-showcase__step-head">الخطوة ٣ — بيانات مقدم الطلب</div>
+            <div class="er-showcase__step-body">
+              <div class="er-field">
+                <span class="er-field__label">سبب تقديم الطلب</span>
+                <div class="er-control">
+                  <select class="er-select" tabindex="-1">
+                    <option selected>بدل فاقد</option>
+                  </select>
+                  <iconify-icon icon="mdi:format-list-bulleted" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+                  <iconify-icon icon="mdi:chevron-down" class="icon icon--sm er-input__chevron" aria-hidden="true"></iconify-icon>
+                </div>
+              </div>
+              <div class="er-field">
+                <span class="er-field__label">اسم من يرغب في تقديم الطلب</span>
+                <div class="er-control">
+                  <input type="text" class="er-input" value="محمد احمد محمد" readonly tabindex="-1" />
+                  <iconify-icon icon="solar:user-linear" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+                </div>
+              </div>
+              <div class="er-field">
+                <span class="er-field__label">الرقم القومي</span>
+                <div class="er-control">
+                  <input type="text" class="er-input" value="30306785549843" readonly tabindex="-1" />
+                  <iconify-icon icon="mdi:card-account-details-outline" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+                </div>
+              </div>
+              <div class="er-field">
+                <span class="er-field__label">تاريخ الميلاد</span>
+                <div class="er-control">
+                  <input type="text" class="er-input" value="14/01/2003" readonly tabindex="-1" />
+                  <iconify-icon icon="mdi:calendar-outline" class="icon icon--sm er-input__icon" aria-hidden="true"></iconify-icon>
+                </div>
+              </div>
+              <div class="er-field">
+                <span class="er-field__label">رقم الهاتف</span>
+                <div class="er-phone">
+                  <span class="er-phone__code"><span class="er-phone__flag">🇸🇦</span> +966</span>
+                  <input type="tel" class="er-phone__input" value="1234567890" readonly tabindex="-1" />
+                </div>
+              </div>
+              <div class="er-actions er-actions--dual">
+                <button type="button" class="er-btn er-btn--outline" tabindex="-1">السابق</button>
+                <button type="button" class="er-btn er-btn--primary" tabindex="-1">متابعة</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 4 preview -->
+          <article class="er-showcase__step">
+            <div class="er-showcase__step-head">الخطوة ٤ — رفع المستندات وإرسال الطلب</div>
+            <div class="er-showcase__step-body">
+              <div class="er-field">
+                <span class="er-field__label">صورة جواز السفر</span>
+                <div class="er-upload">
+                  <div class="er-upload__zone">
+                    <div class="er-upload__empty">
+                      <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                      <p class="er-upload__text">اضغط لرفع الصورة</p>
+                      <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <label class="er-declaration">
+                <input type="checkbox" class="er-declaration__input" checked tabindex="-1" />
+                <span class="er-declaration__text">أقر بأن كافة البيانات المدخلة في هذا النموذج صحيحة و أتحمل مسؤولية ما يترتب على ذلك</span>
+              </label>
+              <div class="er-actions er-actions--dual">
+                <button type="button" class="er-btn er-btn--outline" tabindex="-1">السابق</button>
+                <button type="button" class="er-btn er-btn--primary" tabindex="-1">ارسال الطلب</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Upload states -->
+          <article class="er-showcase__step">
+            <div class="er-showcase__step-head">حالات رفع المستندات</div>
+            <div class="er-showcase__step-body">
+              <div class="er-showcase__states">
+                <div>
+                  <p class="er-showcase__state-label">فارغ</p>
+                  <div class="er-upload">
+                    <div class="er-upload__zone">
+                      <div class="er-upload__empty">
+                        <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                        <p class="er-upload__text">اضغط لرفع الصورة</p>
+                        <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="er-showcase__state-label">تحويم / سحب</p>
+                  <div class="er-upload er-upload--drag">
+                    <div class="er-upload__zone">
+                      <div class="er-upload__empty">
+                        <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                        <p class="er-upload__text">اضغط لرفع الصورة</p>
+                        <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="er-showcase__state-label">جاري الرفع</p>
+                  <div class="er-upload er-upload--loading">
+                    <div class="er-upload__zone">
+                      <div class="er-upload__loading">
+                        <span class="er-upload__spinner" aria-hidden="true"></span>
+                        <div class="er-upload__progress"><div class="er-upload__progress-bar" style="width: 60%"></div></div>
+                        <p class="er-upload__text">جاري الرفع...</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="er-showcase__state-label">تم الرفع</p>
+                  <div class="er-upload er-upload--preview">
+                    <div class="er-upload__zone">
+                      <div class="er-upload__preview">
+                        <img src="https://placehold.co/200x120/efefef/31343C" alt="" class="er-upload__thumb" />
+                        <p class="er-upload__filename">passport.jpg</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="er-showcase__state-label">خطأ</p>
+                  <div class="er-upload er-upload--error">
+                    <div class="er-upload__zone">
+                      <div class="er-upload__empty">
+                        <iconify-icon icon="mdi:tray-arrow-up" class="er-upload__icon"></iconify-icon>
+                        <p class="er-upload__text">اضغط لرفع الصورة</p>
+                        <p class="er-upload__hint">أقصى حجم للصورة 1MB</p>
+                      </div>
+                    </div>
+                    <p class="er-upload__error-msg">أقصى حجم للصورة 1MB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__column site-footer__column--brand">
+        <a href="home.html" class="site-footer__logo">
+          <img src="assets/images/logo.png" alt="" class="site-footer__logo-img" width="48" height="48" />
+          <span class="site-footer__logo-text">مصري بالخارج</span>
+        </a>
+        <p class="site-footer__about">
+          منصة رقمية متكاملة تقدم خدمات قنصلية للمصريين في الخارج بسهولة وأمان، أينما كنت حول العالم.
+        </p>
+        <div class="site-footer__social">
+          <a href="#" class="site-footer__social-link" aria-label="إكس">
+            <iconify-icon icon="mdi:twitter" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="إنستغرام">
+            <iconify-icon icon="mdi:instagram" class="icon"></iconify-icon>
+          </a>
+          <a href="#" class="site-footer__social-link" aria-label="فيسبوك">
+            <iconify-icon icon="mdi:facebook" class="icon"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">روابط سريعة</h3>
+        <ul class="site-footer__list">
+          <li><a href="home.html">الرئيسية</a></li>
+          <li><a href="news.html">الاخبار</a></li>
+          <li><a href="family-management.html">اداره افراد الاسره</a></li>
+          <li><a href="request-tracking.html">تتبع الطلبات</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الخدمات</h3>
+        <ul class="site-footer__list">
+          <li><a href="external-request.html" class="is-active" aria-current="page">الطلبات الخارجية</a></li>
+          <li><a href="add-family-members.html">اضافة ابن / ابنة</a></li>
+          <li><a href="social-media-transactions.html">معاملات سوشيال ميديا</a></li>
+          <li><a href="transaction-fees.html">رسوم المعاملات</a></li>
+          <li><a href="working-hours.html">ايام العمل والاجازات</a></li>
+          <li><a href="#">الاخبار المفضلة</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">الدعم</h3>
+        <ul class="site-footer__list">
+          <li><a href="faq.html">الاسئلة الشائعة</a></li>
+          <li><a href="complaints.html">الشكاوي و المقترحات</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© 2026 مصري بالخارج. جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <a href="#" class="chat-fab" aria-label="المساعد الذكي">
+    <iconify-icon icon="mdi:robot-outline" class="icon icon--lg"></iconify-icon>
+  </a>
+
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/external-request.js"></script>
+</body>
+</html>
