@@ -2,6 +2,7 @@
   var tabBtns = document.querySelectorAll("[data-rt-tab-btn]");
   var panels = document.querySelectorAll("[data-rt-panel]");
   var toggles = document.querySelectorAll("[data-rt-toggle]");
+  var pastDeletes = document.querySelectorAll("[data-rt-past-delete]");
 
   tabBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -12,8 +13,7 @@
         b.setAttribute("aria-selected", isActive ? "true" : "false");
       });
       panels.forEach(function (panel) {
-        var show = panel.dataset.rtPanel === target;
-        panel.hidden = !show;
+        panel.hidden = panel.dataset.rtPanel !== target;
       });
     });
   });
@@ -41,6 +41,13 @@
         ' <iconify-icon icon="' +
         (isOpen ? iconShow : iconHide) +
         '" class="icon icon--sm"></iconify-icon>';
+    });
+  });
+
+  pastDeletes.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var card = btn.closest("[data-rt-past-card]");
+      if (card) card.remove();
     });
   });
 })();

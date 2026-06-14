@@ -152,15 +152,27 @@
 
   <main class="rt-main">
     <div class="rt-main__inner">
-      <div class="rt-tabs" role="tablist" aria-label="تصفية الطلبات">
-        <div class="rt-tabs__group">
-          <button type="button" class="rt-tabs__btn rt-tabs__btn--active" data-rt-tab-btn="current" role="tab" aria-selected="true">الطلبات الحالية</button>
-          <button type="button" class="rt-tabs__btn" data-rt-tab-btn="past" role="tab" aria-selected="false">الطلبات السابقة</button>
+      <div class="rt-shell">
+        <div class="rt-tabs" role="tablist" aria-label="تصفية الطلبات">
+          <div class="rt-tabs__group">
+            <button type="button" class="rt-tabs__btn rt-tabs__btn--active" data-rt-tab-btn="current" role="tab" aria-selected="true">الطلبات الحالية</button>
+            <button type="button" class="rt-tabs__btn" data-rt-tab-btn="past" role="tab" aria-selected="false">الطلبات السابقة</button>
+          </div>
         </div>
-      </div>
 
-      <div class="rt-panel" data-rt-panel="current" role="tabpanel">
-        <div class="rt-grid">
+        <!-- Current requests -->
+        <div class="rt-panel" data-rt-panel="current" role="tabpanel">
+          <div class="rt-empty-state auth-guest" data-rt-empty>
+            <img src="assets/images/rafiki.png" alt="" class="rt-empty-state__image" width="220" height="140" />
+            <h2 class="rt-empty-state__title">لا توجد طلبات حالية</h2>
+            <p class="rt-empty-state__text">يمكنك انشاء طلب جديد ومتابعة هنا</p>
+            <a href="external-request.html" class="btn-primary rt-empty-state__btn">
+              ابدأ تقديم طلبك الآن
+              <iconify-icon icon="line-md:arrow-left" class="icon icon--sm" aria-hidden="true"></iconify-icon>
+            </a>
+          </div>
+
+          <div class="rt-grid auth-user" data-rt-current-grid hidden>
           <article class="rt-card rt-card--open" data-rt-card>
             <div class="rt-card__head">
               <div class="rt-card__info">
@@ -340,84 +352,188 @@
               </button>
             </div>
           </article>
+          </div>
+        </div>
+
+        <!-- Previous requests -->
+        <div class="rt-panel" data-rt-panel="past" role="tabpanel" hidden>
+          <div class="rt-past-grid" data-rt-past-grid>
+            <article class="rt-past-card rt-past-card--success" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:check-bold" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">تم استلام الخدمة بنجاح</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--rejected" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:close-thick" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">سبب رفض الطلب</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--success" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:check-bold" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">تم استلام الخدمة بنجاح</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--rejected" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:close-thick" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">سبب رفض الطلب</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--success" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:check-bold" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">تم استلام الخدمة بنجاح</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--rejected" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:close-thick" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">سبب رفض الطلب</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--success" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:check-bold" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">تم استلام الخدمة بنجاح</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--rejected" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:close-thick" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">سبب رفض الطلب</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--success" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:check-bold" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">تم استلام الخدمة بنجاح</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--rejected" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:close-thick" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">سبب رفض الطلب</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--success" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:check-bold" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">تم استلام الخدمة بنجاح</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+            <article class="rt-past-card rt-past-card--rejected" data-rt-past-card>
+              <div class="rt-past-card__main">
+                <span class="rt-past-card__status-icon" aria-hidden="true"><iconify-icon icon="mdi:close-thick" class="icon"></iconify-icon></span>
+                <div class="rt-past-card__info">
+                  <h3 class="rt-past-card__title">استخراج بدل فاقد</h3>
+                  <p class="rt-past-card__subtitle">سبب رفض الطلب</p>
+                </div>
+              </div>
+              <button type="button" class="rt-past-card__delete" data-rt-past-delete aria-label="حذف الطلب"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></button>
+            </article>
+          </div>
         </div>
       </div>
 
-      <div class="rt-panel" data-rt-panel="past" role="tabpanel" hidden>
-        <div class="rt-grid">
-          <article class="rt-card" data-rt-card>
-            <div class="rt-card__head">
-              <div class="rt-card__info">
-                <h2 class="rt-card__title">بطاقة الرقم القومي</h2>
-                <p class="rt-card__status rt-card__status--accepted">
-                  <span class="rt-card__dot" aria-hidden="true"></span>
-                  تم قبول طلبك
-                </p>
-              </div>
-              <time class="rt-card__date" datetime="2025-12-15">15-12-2025</time>
-            </div>
-            <div class="rt-card__body">
-              <ol class="rt-timeline" data-rt-details hidden>
-                <li class="rt-step rt-step--accepted">
-                  <div class="rt-step__body">
-                    <strong class="rt-step__title">تم قبول طلبك</strong>
-                    <p class="rt-step__text">رقم الموافقة: #2280145673</p>
+      <!-- Static showcase: all tab states -->
+      <section class="rt-showcase" aria-label="عرض حالات تتبع الطلب">
+        <h2 class="rt-showcase__title">عرض جميع الحالات</h2>
+        <div class="rt-showcase__grid"> 
+          <article class="rt-showcase__case">
+            <h3 class="rt-showcase__case-title">الطلبات الحالية — بطاقة مفتوحة</h3>
+            <div class="rt-shell rt-shell--compact">
+              <article class="rt-card rt-card--open">
+                <div class="rt-card__head">
+                  <div class="rt-card__info">
+                    <h2 class="rt-card__title">استخراج جواز سفر بدل فاقد</h2>
+                    <p class="rt-card__status rt-card__status--review"><span class="rt-card__dot"></span>قيد المراجعة</p>
                   </div>
-                  <div class="rt-step__track">
-                    <span class="rt-step__icon">
-                      <iconify-icon icon="mdi:file-document-check-outline" class="icon"></iconify-icon>
-                    </span>
-                  </div>
-                  <time class="rt-step__date" datetime="2025-12-15">15-12-2025</time>
-                </li>
-              </ol>
-            </div>
-            <div class="rt-card__divider" aria-hidden="true"></div>
-            <div class="rt-card__footer">
-              <button type="button" class="rt-card__toggle" data-rt-toggle aria-expanded="false">
-                عرض التفاصيل
-                <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-              </button>
+                  <time class="rt-card__date">8-2-2026</time>
+                </div>
+                <div class="rt-card__body">
+                  <ol class="rt-timeline">
+                    <li class="rt-step rt-step--review">
+                      <div class="rt-step__body"><strong class="rt-step__title">قيد مراجعة طلبك</strong><p class="rt-step__text">جاري مراجعة طلبك من قبل الموظف المختص</p></div>
+                      <div class="rt-step__track"><span class="rt-step__icon"><iconify-icon icon="mdi:sync" class="icon"></iconify-icon></span></div>
+                      <time class="rt-step__date">8-2-2026</time>
+                    </li>
+                  </ol>
+                </div>
+                <div class="rt-card__divider"></div>
+                <div class="rt-card__footer"><span class="rt-card__toggle">إخفاء التفاصيل</span></div>
+              </article>
             </div>
           </article>
-
-          <article class="rt-card" data-rt-card>
-            <div class="rt-card__head">
-              <div class="rt-card__info">
-                <h2 class="rt-card__title">تصديق شهادة</h2>
-                <p class="rt-card__status rt-card__status--rejected">
-                  <span class="rt-card__dot" aria-hidden="true"></span>
-                  تم رفض طلبك
-                </p>
+          <article class="rt-showcase__case rt-showcase__case--wide">
+            <h3 class="rt-showcase__case-title">الطلبات السابقة</h3>
+            <div class="rt-shell rt-shell--compact">
+              <div class="rt-past-grid rt-past-grid--compact">
+                <article class="rt-past-card rt-past-card--success">
+                  <div class="rt-past-card__main">
+                    <span class="rt-past-card__status-icon"><iconify-icon icon="mdi:check-bold" class="icon"></iconify-icon></span>
+                    <div class="rt-past-card__info"><h3 class="rt-past-card__title">استخراج بدل فاقد</h3><p class="rt-past-card__subtitle">تم استلام الخدمة بنجاح</p></div>
+                  </div>
+                  <span class="rt-past-card__delete"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></span>
+                </article>
+                <article class="rt-past-card rt-past-card--rejected">
+                  <div class="rt-past-card__main">
+                    <span class="rt-past-card__status-icon"><iconify-icon icon="mdi:close-thick" class="icon"></iconify-icon></span>
+                    <div class="rt-past-card__info"><h3 class="rt-past-card__title">استخراج بدل فاقد</h3><p class="rt-past-card__subtitle">سبب رفض الطلب</p></div>
+                  </div>
+                  <span class="rt-past-card__delete"><iconify-icon icon="mdi:trash-can-outline" class="icon icon--sm"></iconify-icon></span>
+                </article>
               </div>
-              <time class="rt-card__date" datetime="2025-11-20">20-11-2025</time>
-            </div>
-            <div class="rt-card__body">
-              <ol class="rt-timeline" data-rt-details hidden>
-                <li class="rt-step rt-step--rejected">
-                  <div class="rt-step__body">
-                    <strong class="rt-step__title">تم رفض طلبك</strong>
-                    <p class="rt-step__text">سبب الرفض: الشهادة غير معتمدة من الجهة المصدرة.</p>
-                  </div>
-                  <div class="rt-step__track">
-                    <span class="rt-step__icon">
-                      <iconify-icon icon="mdi:file-document-remove-outline" class="icon"></iconify-icon>
-                    </span>
-                  </div>
-                  <time class="rt-step__date" datetime="2025-11-20">20-11-2025</time>
-                </li>
-              </ol>
-            </div>
-            <div class="rt-card__divider" aria-hidden="true"></div>
-            <div class="rt-card__footer">
-              <button type="button" class="rt-card__toggle" data-rt-toggle aria-expanded="false">
-                عرض التفاصيل
-                <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-              </button>
             </div>
           </article>
         </div>
-      </div>
+      </section>
     </div>
   </main>
 
@@ -457,7 +573,7 @@
       <div class="site-footer__column">
         <h3 class="site-footer__heading">الخدمات</h3>
         <ul class="site-footer__list">
-          <li><a href="#">الطلبات الخارجية</a></li>
+          <li><a href="external-request.html">الطلبات الخارجية</a></li>
           <li><a href="#">اضافة ابن / ابنة</a></li>
           <li><a href="social-media-transactions.html">معاملات سوشيال ميديا</a></li>
           <li><a href="transaction-fees.html">رسوم المعاملات</a></li>

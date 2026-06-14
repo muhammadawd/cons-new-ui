@@ -175,7 +175,7 @@
         checkbox.focus();
         return;
       }
-      alert("تم إرسال الطلب بنجاح");
+      window.location.href = "request-tracking.html";
     });
   }
 })();

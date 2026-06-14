@@ -65,6 +65,8 @@
       ".faq-search",
       ".faq-item",
       ".rt-card",
+      ".rt-past-card",
+      ".rt-empty-state",
       ".fm-card",
       ".news-card",
       ".news-filters",
@@ -105,7 +107,7 @@
 
   function applyStaggerDelays() {
     var staggerParents =
-      ".services__grid, .faq-grid, .news-grid, .sm-grid, .options-grid, .site-footer__inner, .hero__features, .notifications-list, .rt-grid, .fm-grid, .landing-panel__inner, .er-showcase__steps";
+      ".services__grid, .faq-grid, .news-grid, .sm-grid, .options-grid, .site-footer__inner, .hero__features, .notifications-list, .rt-grid, .rt-past-grid, .fm-grid, .landing-panel__inner, .er-showcase__steps";
 
     document.querySelectorAll(staggerParents).forEach(function (parent) {
       var items = parent.querySelectorAll(":scope > .site-reveal--stagger, :scope > .home-reveal--stagger");
