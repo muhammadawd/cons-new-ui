@@ -32,7 +32,7 @@
     preloader.innerHTML =
       '<div class="page-preloader__inner">' +
       '<div class="page-preloader__logo-wrap">' +
-      '<img src="assets/images/logo.png" alt="" class="page-preloader__logo" width="64" height="64" />' +
+      '<img src="assets/images/logo.svg" alt="" class="page-preloader__logo" width="64" height="64" />' +
       "</div>" +
       '<p class="page-preloader__title">مصري بالخارج</p>' +
       '<div class="page-preloader__track" aria-hidden="true">' +

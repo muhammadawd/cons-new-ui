@@ -19,7 +19,7 @@
   <div id="page-preloader" class="page-preloader" role="status" aria-live="polite" aria-label="جاري تحميل الصفحة">
     <div class="page-preloader__inner">
       <div class="page-preloader__logo-wrap">
-        <img src="assets/images/logo.png" alt="" class="page-preloader__logo" width="64" height="64" />
+        <img src="assets/images/logo.svg" alt="" class="page-preloader__logo" width="64" height="64" />
       </div>
       <p class="page-preloader__title">مصري بالخارج</p>
       <div class="page-preloader__track" aria-hidden="true">
@@ -31,7 +31,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="home.html" class="site-logo">
-        <img src="assets/images/logo.png" alt="" class="site-logo__img" width="40" height="40" />
+        <img src="assets/images/logo.svg" alt="" class="site-logo__img" width="40" height="40" />
         <span class="site-logo__text">مصري بالخارج</span>
       </a>
 
@@ -126,10 +126,10 @@
               <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
             </div>
             <div class="header-dropdown__body">
-              <a href="#" class="header-dropdown__link header-dropdown__link--icon">
+              <button type="button" class="header-dropdown__link header-dropdown__link--icon" data-switch-account-open>
                 <iconify-icon icon="mdi:account-switch-outline" class="icon"></iconify-icon>
                 تبديل الحساب
-              </a>
+              </button>
               <button type="button" class="header-dropdown__link header-dropdown__link--danger header-dropdown__link--icon" data-auth-toggle="logout">
                 <iconify-icon icon="mdi:logout" class="icon"></iconify-icon>
                 تسجيل الخروج
@@ -199,7 +199,7 @@
 
         <div class="hero__visual home-reveal home-reveal--on-load home-reveal--fade-left home-reveal--delay-2">
           <img
-            src="assets/images/hero-image.png"
+            src="assets/images/hero-section.svg"
             alt="تطبيق مصري بالخارج على الهاتف المحمول"
             class="hero__image"
             width="520"
@@ -329,7 +329,7 @@
       <div class="app-promo__inner">
         <div class="app-promo__visual home-reveal home-reveal--fade-right">
           <img
-            src="assets/images/download-app-image.png"
+            src="assets/images/download-app.svg"
             alt="حمّل تطبيق مصري بالخارج"
             class="app-promo__image"
             width="520"
@@ -347,13 +347,13 @@
           </p>
           <div class="store-badges">
             <a href="#" class="store-badges__link">
-              <img src="assets/images/playstore.png" alt="احصل عليه من Google Play" class="store-badges__img" width="160" height="48" />
+              <img src="assets/images/google-play.svg" alt="احصل عليه من Google Play" class="store-badges__img" width="160" height="48" />
             </a>
             <a href="#" class="store-badges__link">
-              <img src="assets/images/appstore.png" alt="تنزيل من App Store" class="store-badges__img" width="160" height="48" />
+              <img src="assets/images/apple-store.svg" alt="تنزيل من App Store" class="store-badges__img" width="160" height="48" />
             </a>
             <a href="#" class="store-badges__link">
-              <img src="assets/images/appgallery.png" alt="استكشفه على AppGallery" class="store-badges__img" width="160" height="48" />
+              <img src="assets/images/app-gallery.svg" alt="استكشفه على AppGallery" class="store-badges__img" width="160" height="48" />
             </a>
           </div>
         </div>
@@ -398,7 +398,7 @@
     <div class="site-footer__inner">
       <div class="site-footer__column site-footer__column--brand home-reveal home-reveal--fade-up">
         <a href="home.html" class="site-footer__logo">
-          <img src="assets/images/logo.png" alt="" class="site-footer__logo-img" width="48" height="48" />
+          <img src="assets/images/logo.svg" alt="" class="site-footer__logo-img" width="48" height="48" />
           <span class="site-footer__logo-text">مصري بالخارج</span>
         </a>
         <p class="site-footer__about">
@@ -456,6 +456,32 @@
   <a href="#" class="chat-fab home-reveal home-reveal--on-load home-reveal--scale home-reveal--delay-7" aria-label="المساعد الذكي">
     <iconify-icon icon="mdi:robot-outline" class="icon icon--lg"></iconify-icon>
   </a>
+
+  <div class="login-app-overlay" data-login-app-overlay hidden>
+    <div class="login-app-modal" role="dialog" aria-modal="true" aria-labelledby="login-app-title">
+      <button type="button" class="login-app-modal__close" data-login-app-close aria-label="إغلاق">
+        <iconify-icon icon="mdi:close" class="icon"></iconify-icon>
+      </button>
+
+      <div class="login-app-modal__icon-wrap" aria-hidden="true">
+        <iconify-icon icon="mdi:login-variant" class="icon login-app-modal__icon"></iconify-icon>
+      </div>
+
+      <h2 id="login-app-title" class="login-app-modal__title">تسجيل الدخول عبر التطبيق</h2>
+      <p class="login-app-modal__text">
+        لتسجيل الدخول، سنرسل طلب تأكيد إلى تطبيق &quot;مصري بالخارج&quot; على هاتفك. إذا لم يكن التطبيق مثبتاً لديك، يمكنك تنزيله وإنشاء حساب جديد.
+      </p>
+
+      <div class="login-app-modal__actions">
+        <button type="button" class="login-app-modal__btn login-app-modal__btn--primary" data-login-app-submit>
+          تسجيل الدخول
+        </button>
+        <a href="#download-app" class="login-app-modal__btn login-app-modal__btn--outline" data-login-app-download>
+          تحميل التطبيق
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/home.js"></script>
 </body>

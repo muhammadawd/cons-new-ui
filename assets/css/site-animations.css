@@ -202,7 +202,6 @@ body:not(.is-loading) .hero__image {
 .afm-card,
 .sm-card,
 .wh-panel,
-.option-link,
 .news-details__related-link,
 .sm-follow {
   transition:
@@ -224,7 +223,6 @@ body:not(.is-loading) .hero__image {
 .afm-card:hover,
 .sm-card:hover,
 .wh-panel:hover,
-.option-link:hover,
 .news-details__related-link:hover,
 .sm-follow:hover {
   transform: translateY(-6px);
@@ -413,7 +411,6 @@ body:not(.is-loading) .hero__image {
   .afm-card:hover,
   .sm-card:hover,
   .wh-panel:hover,
-  .option-link:hover,
   .location__map:hover,
   .app-promo__visual:hover .app-promo__image,
   .btn-primary:hover,

@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="assets/css/custom.css" />
   <link rel="stylesheet" href="assets/css/icons.css" />
   <link rel="stylesheet" href="assets/css/home.css" />
-  <link rel="stylesheet" href="assets/css/faq.css" />
   <link rel="stylesheet" href="assets/css/news.css" />
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
@@ -21,7 +20,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="home.html" class="site-logo">
-        <img src="assets/images/logo.png" alt="" class="site-logo__img" width="40" height="40" />
+        <img src="assets/images/logo.svg" alt="" class="site-logo__img" width="40" height="40" />
         <span class="site-logo__text">مصري بالخارج</span>
       </a>
 
@@ -116,10 +115,10 @@
               <span class="user-dropdown__id">٢٨٤٧٣٩٢١٠٤</span>
             </div>
             <div class="header-dropdown__body">
-              <a href="#" class="header-dropdown__link header-dropdown__link--icon">
+              <button type="button" class="header-dropdown__link header-dropdown__link--icon" data-switch-account-open>
                 <iconify-icon icon="mdi:account-switch-outline" class="icon"></iconify-icon>
                 تبديل الحساب
-              </a>
+              </button>
               <button type="button" class="header-dropdown__link header-dropdown__link--danger header-dropdown__link--icon" data-auth-toggle="logout">
                 <iconify-icon icon="mdi:logout" class="icon"></iconify-icon>
                 تسجيل الخروج
@@ -137,15 +136,15 @@
 
   <button type="button" class="site-sidebar-overlay" data-sidebar-overlay hidden aria-label="إغلاق القائمة"></button>
 
-  <section class="faq-hero">
-    <div class="faq-hero__inner">
-      <h1 class="faq-hero__title">أحدث الأخبار</h1>
-      <nav class="faq-breadcrumb" aria-label="مسار التنقل">
+  <section class="news-hero">
+    <div class="news-hero__inner">
+      <h1 class="news-hero__title">أحدث الأخبار</h1>
+      <nav class="news-hero__breadcrumb" aria-label="مسار التنقل">
         <a href="home.html">الرئيسية</a>
-        <span class="faq-breadcrumb__sep" aria-hidden="true">
+        <span class="news-hero__breadcrumb-sep" aria-hidden="true">
           <iconify-icon icon="ri:arrow-left-double-line" class="icon icon--sm"></iconify-icon>
         </span>
-        <span class="faq-breadcrumb__current" aria-current="page">الأخبار</span>
+        <span class="news-hero__breadcrumb-current" aria-current="page">الأخبار</span>
       </nav>
     </div>
   </section>
@@ -154,8 +153,8 @@
     <div class="news-main__inner">
       <div class="news-filters" role="tablist" aria-label="تصفية الأخبار">
         <button type="button" class="news-filter news-filter--active" data-news-filter="all" role="tab" aria-selected="true">الكل</button>
-        <button type="button" class="news-filter" data-news-filter="consulate" role="tab" aria-selected="false">أخبار القنصلية</button>
-        <button type="button" class="news-filter" data-news-filter="ministry" role="tab" aria-selected="false">أخبار الوزارة</button>
+        <button type="button" class="news-filter" data-news-filter="consulate" role="tab" aria-selected="false">اخبار القنصلية</button>
+        <button type="button" class="news-filter" data-news-filter="ministry" role="tab" aria-selected="false">اخبار الوزارة</button>
       </div>
 
       <div class="news-grid">
@@ -163,10 +162,11 @@
           <div class="news-card__media">
             <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
             <div class="news-card__meta">
-              <time class="news-card__date" datetime="2024-02-01">2024/2/1</time>
-              <span class="news-card__pin" aria-label="خبر مميز">
-                <iconify-icon icon="solar:pin-bold" class="icon icon--sm"></iconify-icon>
+              <span class="news-card__pin">
+                <iconify-icon icon="solar:pin-bold" class="icon icon--sm" aria-hidden="true"></iconify-icon>
+                مثبت
               </span>
+              <time class="news-card__date" datetime="2026-02-01">2026/2/1</time>
             </div>
           </div>
           <div class="news-card__body">
@@ -176,23 +176,17 @@
               <span class="news-card__more">المزيد</span>
             </p>
             <div class="news-card__footer">
-              <div class="news-card__stats">
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
-                  112
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
-                  200
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-                  200
-                </span>
-              </div>
               <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
                 <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
               </a>
+              <div class="news-card__actions">
+                <button type="button" class="news-card__icon-btn" aria-label="مشاركة">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+                <button type="button" class="news-card__icon-btn" aria-label="إضافة للمفضلة">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+              </div>
             </div>
           </div>
         </article>
@@ -201,7 +195,7 @@
           <div class="news-card__media">
             <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
             <div class="news-card__meta">
-              <time class="news-card__date" datetime="2024-01-28">2024/1/28</time>
+              <time class="news-card__date" datetime="2026-01-28">2026/1/28</time>
             </div>
           </div>
           <div class="news-card__body">
@@ -211,23 +205,17 @@
               <span class="news-card__more">المزيد</span>
             </p>
             <div class="news-card__footer">
-              <div class="news-card__stats">
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
-                  86
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
-                  145
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-                  180
-                </span>
-              </div>
               <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
                 <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
               </a>
+              <div class="news-card__actions">
+                <button type="button" class="news-card__icon-btn" aria-label="مشاركة">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+                <button type="button" class="news-card__icon-btn" aria-label="إضافة للمفضلة">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+              </div>
             </div>
           </div>
         </article>
@@ -236,7 +224,7 @@
           <div class="news-card__media">
             <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
             <div class="news-card__meta">
-              <time class="news-card__date" datetime="2024-01-25">2024/1/25</time>
+              <time class="news-card__date" datetime="2026-01-25">2026/1/25</time>
             </div>
           </div>
           <div class="news-card__body">
@@ -246,32 +234,26 @@
               <span class="news-card__more">المزيد</span>
             </p>
             <div class="news-card__footer">
-              <div class="news-card__stats">
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
-                  204
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
-                  320
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-                  350
-                </span>
-              </div>
               <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
                 <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
               </a>
+              <div class="news-card__actions">
+                <button type="button" class="news-card__icon-btn" aria-label="مشاركة">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+                <button type="button" class="news-card__icon-btn" aria-label="إضافة للمفضلة">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+              </div>
             </div>
           </div>
         </article>
 
         <article class="news-card" data-news-card data-news-category="consulate">
           <div class="news-card__media">
-            <img src="https://placehold.co/400x400/fff/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
             <div class="news-card__meta">
-              <time class="news-card__date" datetime="2024-01-20">2024/1/20</time>
+              <time class="news-card__date" datetime="2026-01-20">2026/1/20</time>
             </div>
           </div>
           <div class="news-card__body">
@@ -281,32 +263,26 @@
               <span class="news-card__more">المزيد</span>
             </p>
             <div class="news-card__footer">
-              <div class="news-card__stats">
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
-                  67
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
-                  98
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-                  120
-                </span>
-              </div>
               <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
                 <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
               </a>
+              <div class="news-card__actions">
+                <button type="button" class="news-card__icon-btn" aria-label="مشاركة">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+                <button type="button" class="news-card__icon-btn" aria-label="إضافة للمفضلة">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+              </div>
             </div>
           </div>
         </article>
 
         <article class="news-card" data-news-card data-news-category="ministry">
           <div class="news-card__media">
-            <img src="https://placehold.co/400x400/fff/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
             <div class="news-card__meta">
-              <time class="news-card__date" datetime="2024-01-15">2024/1/15</time>
+              <time class="news-card__date" datetime="2026-01-15">2026/1/15</time>
             </div>
           </div>
           <div class="news-card__body">
@@ -316,32 +292,26 @@
               <span class="news-card__more">المزيد</span>
             </p>
             <div class="news-card__footer">
-              <div class="news-card__stats">
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
-                  91
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
-                  176
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-                  200
-                </span>
-              </div>
               <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
                 <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
               </a>
+              <div class="news-card__actions">
+                <button type="button" class="news-card__icon-btn" aria-label="مشاركة">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+                <button type="button" class="news-card__icon-btn" aria-label="إضافة للمفضلة">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+              </div>
             </div>
           </div>
         </article>
 
         <article class="news-card" data-news-card data-news-category="ministry">
           <div class="news-card__media">
-            <img src="https://placehold.co/400x400/fff/31343C" alt="" class="news-card__image" width="400" height="400" />
+            <img src="https://placehold.co/400x400/efefef/31343C" alt="" class="news-card__image" width="400" height="400" />
             <div class="news-card__meta">
-              <time class="news-card__date" datetime="2024-01-10">2024/1/10</time>
+              <time class="news-card__date" datetime="2026-01-10">2026/1/10</time>
             </div>
           </div>
           <div class="news-card__body">
@@ -351,30 +321,24 @@
               <span class="news-card__more">المزيد</span>
             </p>
             <div class="news-card__footer">
-              <div class="news-card__stats">
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
-                  58
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
-                  132
-                </span>
-                <span class="news-card__stat">
-                  <iconify-icon icon="solar:eye-linear" class="icon icon--sm"></iconify-icon>
-                  150
-                </span>
-              </div>
               <a href="news-details.html" class="news-card__action" aria-label="قراءة الخبر">
                 <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm"></iconify-icon>
               </a>
+              <div class="news-card__actions">
+                <button type="button" class="news-card__icon-btn" aria-label="مشاركة">
+                  <iconify-icon icon="solar:share-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+                <button type="button" class="news-card__icon-btn" aria-label="إضافة للمفضلة">
+                  <iconify-icon icon="solar:heart-linear" class="icon icon--sm"></iconify-icon>
+                </button>
+              </div>
             </div>
           </div>
         </article>
       </div>
 
       <div class="news-empty" data-news-empty hidden>
-        <img src="assets/images/rafiki.png" alt="" class="news-empty__image" width="220" height="140" />
+        <img src="assets/images/rafiki.svg" alt="" class="news-empty__image" width="220" height="140" />
         <h2 class="news-empty__title">لا توجد أخبار</h2>
         <p class="news-empty__text">لا توجد أخبار في هذا التصنيف حالياً، جرّب تصفية أخرى أو عد لاحقاً.</p>
       </div>
@@ -385,7 +349,7 @@
     <div class="site-footer__inner">
       <div class="site-footer__column site-footer__column--brand">
         <a href="home.html" class="site-footer__logo">
-          <img src="assets/images/logo.png" alt="" class="site-footer__logo-img" width="48" height="48" />
+          <img src="assets/images/logo.svg" alt="" class="site-footer__logo-img" width="48" height="48" />
           <span class="site-footer__logo-text">مصري بالخارج</span>
         </a>
         <p class="site-footer__about">

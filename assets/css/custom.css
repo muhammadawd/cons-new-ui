@@ -75,12 +75,17 @@ body {
   font-weight: var(--weight-semibold);
   line-height: 1.4;
   color: #fff;
-  transition: background-color 0.15s ease;
+  transition:
+    background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   max-width: 100px;
 }
 
 .breadcrumb-back:hover {
   background-color: #9a7124;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(185, 133, 44, 0.22);
 }
 
 .breadcrumb-tag {
@@ -108,6 +113,33 @@ body {
 .selection-panel {
   scrollbar-gutter: stable;
   -webkit-overflow-scrolling: touch;
+}
+
+.selection-panel__content {
+  flex: 1;
+  min-height: 0;
+}
+
+.selection-panel__footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.selection-submit {
+  min-width: 11rem;
+  min-height: 3rem;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.625rem;
+  font-size: var(--text-sm);
+}
+
+.selection-submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .selection-panel::-webkit-scrollbar {
@@ -147,6 +179,9 @@ body {
   line-height: 1.5;
   color: #111827;
   text-align: start;
+  transition:
+    border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .search-field:focus {
@@ -189,6 +224,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
+  width: 100%;
   border: 1px solid #d1d5db;
   border-radius: 0.75rem;
   background-color: #fff;
@@ -199,13 +235,30 @@ body {
   line-height: 1.5;
   color: #374151;
   text-align: start;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  cursor: pointer;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.35s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
+button.option-link {
+  appearance: none;
+}
+
 .option-link:hover {
-  border-color: #c4c4c4;
-  background-color: #fafafa;
+  transform: translateY(-2px);
+  border-color: rgba(185, 133, 44, 0.45);
+  background-color: #fffdf8;
+  box-shadow: 0 8px 24px rgba(185, 133, 44, 0.1);
+}
+
+.option-link[aria-current='page']:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(185, 133, 44, 0.14);
 }
 
 .option-link:focus-visible {
@@ -235,6 +288,15 @@ body {
   border: 2px solid #d1d5db;
   border-radius: 9999px;
   background-color: #fff;
+  transition:
+    border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.option-link:hover .option-radio {
+  border-color: rgba(185, 133, 44, 0.55);
+  transform: scale(1.06);
 }
 
 .option-link[aria-current='page'] .option-radio {
@@ -419,12 +481,24 @@ body {
   line-height: 1.5;
   color: #fff;
   text-align: center;
-  transition: background-color 0.15s ease;
+  transition:
+    background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn-primary:hover {
+.btn-primary:hover:not(:disabled) {
   background-color: #9a7124;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(185, 133, 44, 0.28);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(185, 133, 44, 0.2);
+  transition-duration: 0.15s;
 }
 
 .btn-primary:focus-visible {
@@ -543,5 +617,25 @@ body {
     min-height: 100vh;
     width: 40%;
     padding: 3.5rem 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .option-link,
+  .option-radio,
+  .breadcrumb-back,
+  .btn-primary,
+  .search-field {
+    transition: none;
+  }
+
+  .option-link:hover,
+  .option-link[aria-current='page']:hover,
+  .option-link:hover .option-radio,
+  .breadcrumb-back:hover,
+  .btn-primary:hover:not(:disabled),
+  .btn-primary:active:not(:disabled) {
+    transform: none;
+    box-shadow: none;
   }
 }
