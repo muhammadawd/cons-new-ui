@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسجيل الدخول | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/login-form.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="h-dvh min-h-screen overflow-hidden bg-[#f7f7f7] text-gray-900 antialiased">
+
+  <main class="h-dvh min-h-screen">
+    <article class="h-full min-h-screen">
+      <div class="flex h-full min-h-screen flex-col lg:flex-row">
+
+        <section class="selection-panel login-panel order-2 flex min-h-0 flex-1 flex-col overflow-y-auto bg-[#f7f7f7] px-5 py-8 sm:px-8 sm:py-10 lg:order-2 lg:px-12 lg:py-12 xl:px-16" aria-labelledby="login-heading">
+
+          <div class="selection-panel__content login-panel__content">
+
+            <nav class="breadcrumb-nav login-panel__nav" aria-label="التنقل">
+              <a href="select-city.html" class="breadcrumb-back">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm" aria-hidden="true"></iconify-icon>
+                العودة
+              </a>
+              <button type="button" class="login-lang-btn" aria-label="اللغة">
+                <iconify-icon icon="iconoir:language" class="icon icon--sm"></iconify-icon>
+                <iconify-icon icon="mdi:chevron-down" class="icon icon--sm login-lang-btn__chevron"></iconify-icon>
+              </button>
+            </nav>
+
+            <header class="login-panel__header">
+              <h1 id="login-heading" class="login-panel__title">تسجيل الدخول</h1>
+              <p class="login-panel__subtitle">اختر نوع المستخدم للمتابعة</p>
+            </header>
+
+            <div class="login-type-switch" role="tablist" aria-label="نوع المستخدم">
+              <button
+                type="button"
+                class="login-type-switch__option login-type-switch__option--active"
+                data-login-type="egyptian"
+                role="tab"
+                aria-selected="true"
+                id="login-tab-egyptian"
+                aria-controls="login-panel-egyptian"
+              >
+                <span class="login-type-switch__icon" aria-hidden="true">
+                  <iconify-icon icon="twemoji:flag-egypt" class="icon"></iconify-icon>
+                </span>
+                المصريون
+              </button>
+              <button
+                type="button"
+                class="login-type-switch__option"
+                data-login-type="foreign"
+                role="tab"
+                aria-selected="false"
+                id="login-tab-foreign"
+                aria-controls="login-panel-foreign"
+              >
+                <span class="login-type-switch__icon" aria-hidden="true">
+                  <iconify-icon icon="iconoir:globe" class="icon icon--sm"></iconify-icon>
+                </span>
+                غير المصريين
+              </button>
+            </div>
+
+            <div class="login-form-fields">
+              <div class="login-field" id="login-panel-egyptian" data-login-panel="egyptian" role="tabpanel" aria-labelledby="login-tab-egyptian">
+                <label class="login-field__label" for="login-national-id">الرقم القومي</label>
+                <div class="login-field__control">
+                  <input
+                    type="text"
+                    id="login-national-id"
+                    class="login-field__input"
+                    inputmode="numeric"
+                    maxlength="14"
+                    placeholder="ادخل 14 رقم"
+                    data-login-input="egyptian"
+                    autocomplete="off"
+                  />
+                  <span class="login-field__icon" aria-hidden="true">
+                    <iconify-icon icon="solar:card-linear" class="icon"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+
+              <div class="login-field" id="login-panel-foreign" data-login-panel="foreign" role="tabpanel" aria-labelledby="login-tab-foreign" hidden>
+                <label class="login-field__label" for="login-residency-id">رقم الاقامة</label>
+                <div class="login-field__control">
+                  <input
+                    type="text"
+                    id="login-residency-id"
+                    class="login-field__input"
+                    placeholder="ادخل رقم الاقامة"
+                    data-login-input="foreign"
+                    autocomplete="off"
+                  />
+                  <span class="login-field__icon" aria-hidden="true">
+                    <iconify-icon icon="solar:card-linear" class="icon"></iconify-icon>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="selection-panel__footer login-panel__footer">
+              <button type="button" class="btn-primary selection-submit login-panel__submit" data-login-submit disabled>
+                متابعة
+              </button>
+              <a href="login-qr.html" class="login-qr-link">
+                تسجيل الدخول عبر رمز QR
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
+
+          </div>
+
+        </section>
+
+        <aside class="branding-panel order-1 lg:order-1" aria-label="مصري بالخارج">
+          <div class="branding-panel__circle branding-panel__circle--start" aria-hidden="true"></div>
+          <div class="branding-panel__circle branding-panel__circle--end" aria-hidden="true"></div>
+
+          <div class="branding-panel__content">
+            <p class="branding-panel__welcome">أهلاً بك في</p>
+
+            <div class="branding-panel__brand-row">
+              <img src="assets/images/logo.svg" alt="" class="branding-panel__logo" width="55" height="55" />
+              <p class="branding-panel__title">مصري بالخارج</p>
+            </div>
+          </div>
+
+          <p class="branding-panel__tagline">
+            نسعد بخدمتك في أي مكان حول العالم
+          </p>
+        </aside>
+
+      </div>
+    </article>
+  </main>
+
+  <div class="login-modal-overlay" data-login-overlay hidden>
+    <div class="login-modal" data-login-modal="pending" role="dialog" aria-modal="true" aria-labelledby="login-modal-pending-title" hidden>
+      <button type="button" class="login-modal__close" data-login-modal-close aria-label="إغلاق">
+        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+      </button>
+
+      <div class="login-modal__icon-wrap login-modal__icon-wrap--success" aria-hidden="true">
+        <iconify-icon icon="mdi:cellphone-check" class="icon login-modal__icon"></iconify-icon>
+      </div>
+
+      <h2 id="login-modal-pending-title" class="login-modal__title">تم إرسال طلب التحقق</h2>
+      <p class="login-modal__text">
+        افتح تطبيق &quot;مصري بالخارج&quot; على هاتفك ووافق على طلب تسجيل الدخول.
+      </p>
+
+      <p class="login-modal__status" data-login-waiting>
+        <span class="login-modal__spinner" aria-hidden="true"></span>
+        ننتظر تأكيدك...
+      </p>
+
+      <div class="login-modal__actions">
+        <button type="button" class="login-modal__btn login-modal__btn--outline" data-login-cancel>إلغاء</button>
+        <button type="button" class="login-modal__btn login-modal__btn--primary" data-login-resend>اعاده ارسال الطلب</button>
+      </div>
+    </div>
+
+    <div class="login-modal" data-login-modal="error" role="dialog" aria-modal="true" aria-labelledby="login-modal-error-title" hidden>
+      <button type="button" class="login-modal__close" data-login-modal-close aria-label="إغلاق">
+        <iconify-icon icon="mdi:close" class="icon icon--sm"></iconify-icon>
+      </button>
+
+      <div class="login-modal__icon-wrap login-modal__icon-wrap--error" aria-hidden="true">
+        <iconify-icon icon="mdi:cellphone-off" class="icon login-modal__icon"></iconify-icon>
+      </div>
+
+      <h2 id="login-modal-error-title" class="login-modal__title">تعذر تسجيل الدخول</h2>
+      <p class="login-modal__text">
+        يبدو أنه تم رفض طلب تسجيل الدخول من التطبيق. يُرجى المحاولة مرة أخرى أو التحقق من بيانات حسابك.
+      </p>
+
+      <div class="login-modal__actions">
+        <a href="home.html#download-app" class="login-modal__btn login-modal__btn--outline">تحميل التطبيق</a>
+        <button type="button" class="login-modal__btn login-modal__btn--primary" data-login-retry>المحاولة مرة اخرى</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/login-form.js"></script>
+</body>
+</html>

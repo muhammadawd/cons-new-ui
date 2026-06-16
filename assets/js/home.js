@@ -340,8 +340,7 @@
     var loginAppSubmit = loginAppOverlay.querySelector("[data-login-app-submit]");
     if (loginAppSubmit) {
       loginAppSubmit.addEventListener("click", function () {
-        setAuthState(true);
-        closeLoginAppModal();
+        window.location.href = "login-form.html";
       });
     }
 

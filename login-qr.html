@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسجيل الدخول برمز QR | مصري بالخارج</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <link rel="stylesheet" href="assets/css/login-form.css" />
+  <link rel="stylesheet" href="assets/css/login-qr.css" />
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+<body class="h-dvh min-h-screen overflow-hidden bg-[#f7f7f7] text-gray-900 antialiased">
+
+  <main class="h-dvh min-h-screen">
+    <article class="h-full min-h-screen">
+      <div class="flex h-full min-h-screen flex-col lg:flex-row">
+
+        <section class="selection-panel login-qr-panel order-2 flex min-h-0 flex-1 flex-col overflow-y-auto bg-[#f7f7f7] px-5 py-8 sm:px-8 sm:py-10 lg:order-2 lg:px-12 lg:py-12 xl:px-16" aria-labelledby="login-qr-heading">
+
+          <div class="selection-panel__content login-qr-panel__content">
+
+            <nav class="breadcrumb-nav login-panel__nav" aria-label="التنقل">
+              <a href="login-form.html" class="breadcrumb-back">
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm" aria-hidden="true"></iconify-icon>
+                العودة
+              </a>
+              <button type="button" class="login-lang-btn" aria-label="اللغة">
+                <iconify-icon icon="iconoir:language" class="icon icon--sm"></iconify-icon>
+                <iconify-icon icon="mdi:chevron-down" class="icon icon--sm login-lang-btn__chevron"></iconify-icon>
+              </button>
+            </nav>
+
+            <header class="login-panel__header login-qr-panel__header">
+              <h1 id="login-qr-heading" class="login-panel__title">تسجيل الدخول</h1>
+              <p class="login-panel__subtitle">الدخول برمز QR</p>
+            </header>
+
+            <div class="login-qr-card">
+              <div
+                class="login-qr-card__target"
+                data-login-qr-target
+                role="img"
+                aria-label="رمز QR لتسجيل الدخول"
+              ></div>
+            </div>
+
+            <ol class="login-qr-steps">
+              <li class="login-qr-steps__item">
+                <span class="login-qr-steps__number" aria-hidden="true">1</span>
+                <span class="login-qr-steps__text">افتح تطبيق &quot;مصري بالخارج&quot; على هاتفك</span>
+              </li>
+              <li class="login-qr-steps__item">
+                <span class="login-qr-steps__number" aria-hidden="true">2</span>
+                <span class="login-qr-steps__text">انتقل إلى القائمة الجانبية &gt; إعدادات التطبيق &gt; الربط مع الموقع الإلكتروني</span>
+              </li>
+              <li class="login-qr-steps__item">
+                <span class="login-qr-steps__number" aria-hidden="true">3</span>
+                <span class="login-qr-steps__text">وجّه الكاميرا نحو هذا الرمز</span>
+              </li>
+              <li class="login-qr-steps__item">
+                <span class="login-qr-steps__number" aria-hidden="true">4</span>
+                <span class="login-qr-steps__text">سيتم تسجيل دخولك تلقائياً</span>
+              </li>
+            </ol>
+
+            <div class="selection-panel__footer login-panel__footer login-qr-panel__footer">
+              <a href="login-form.html" class="login-qr-alt-link">
+                تسجيل الدخول عبر الرقم القومي
+                <iconify-icon icon="iconamoon:arrow-left-2-light" class="icon icon--sm" aria-hidden="true"></iconify-icon>
+              </a>
+            </div>
+
+          </div>
+
+        </section>
+
+        <aside class="branding-panel order-1 lg:order-1" aria-label="مصري بالخارج">
+          <div class="branding-panel__circle branding-panel__circle--start" aria-hidden="true"></div>
+          <div class="branding-panel__circle branding-panel__circle--end" aria-hidden="true"></div>
+
+          <div class="branding-panel__content">
+            <p class="branding-panel__welcome">أهلاً بك في</p>
+
+            <div class="branding-panel__brand-row">
+              <img src="assets/images/logo.svg" alt="" class="branding-panel__logo" width="55" height="55" />
+              <p class="branding-panel__title">مصري بالخارج</p>
+            </div>
+          </div>
+
+          <p class="branding-panel__tagline">
+            نسعد بخدمتك في أي مكان حول العالم
+          </p>
+        </aside>
+
+      </div>
+    </article>
+  </main>
+
+  <script src="assets/js/qrcode.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/login-qr.js"></script>
+</body>
+</html>
